@@ -1,0 +1,29 @@
+@keyframes animate {
+    from {
+        opacity: 0;
+        scale: 0.5
+    } 
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.animateAppear {
+    animation: animate linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #111827;
+    border-radius: 10px;
+}

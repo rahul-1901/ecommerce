@@ -11,6 +11,22 @@
     gap: 40px;
 }
 
+.routeMain {
+    text-decoration: none;
+}
+
+.routeMain:hover {
+    text-decoration: none;
+}
+
+.logoName {
+    text-decoration: none;
+}
+
+.logoName:hover {
+    text-decoration: none;
+}
+
 .smallNavbar {
     display: flex;
     background-color: rgba(236, 217, 217, 0.825);

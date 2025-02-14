@@ -7,9 +7,8 @@ import "./Navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
-      <div className='navbarBody bg-white-700 top-0 left-0 w-full z-100'>
-        <div className='navbarContent mx-auto p-5'>
+      <div className='navbarBody w-full top-0 left-0 fixed z-9999'>
+        <div className='navbarContent mx-auto shadow-md p-5 bg-white'>
 
           <div className='navbarLogo flex items-center md:px-10'>
             <Link to="/" className='logoName md:text-2xl text-3xl font-bold'>
@@ -18,16 +17,16 @@ const Navbar = () => {
           </div>
 
           <div className='navbarRoutes md:flex items-center text-xl hidden'>
-            <Link to="/">
+            <Link to="/" className='routeMain'>
               Home
             </Link>
-            <Link to="/Men">
+            <Link to="/Men" className='routeMain'>
               Collection
             </Link>
-            <Link to="/Men">
+            <Link to="/Men" className='routeMain'>
               New
             </Link>
-            <Link to="/Men">
+            <Link to="/Men" className='routeMain'>
               About
             </Link>
           </div>
@@ -69,7 +68,6 @@ const Navbar = () => {
         </motion.div>
         )}
       </div>
-    </>
   )
 }
 

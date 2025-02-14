@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import "./Home.css";
 import { Loader2, Star } from 'lucide-react';
 import { bestSellers, getClothes } from '../backendApi/api';
+import "../components/animate.css";
 
 const Home = () => {
     const [isShaking, setIsShaking] = useState(false);
@@ -61,19 +62,19 @@ const Home = () => {
                     </div>
 
                     <div className='diffSection flex flex-wrap mt-24 gap-12'>
-                        <div className='redSec'>
+                        <div className='redSec animateAppear'>
                             <div className='firstBlur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
                                 <a href="/Men" className=''>Shop</a>
                             </div>
                         </div>
-                        <div className='secSec'>
+                        <div className='secSec animateAppear'>
                             <div className='first1Blur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
                                 <a href="/Men" className=''>Shop</a>
                             </div>
                         </div>
-                        <div className='thirdSec'>
+                        <div className='thirdSec animateAppear'>
                             <div className='first2Blur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
                                 <a href="/Men" className=''>Shop</a>
@@ -82,13 +83,13 @@ const Home = () => {
                     </div>
 
                     <div className=''>
-                        <div className='boundLine flex'>
+                        <div className='boundLine flex animateAppear'>
                             <p className='text-center text-3xl'><span className='latest'>LATEST</span> COLLECTIONS</p>
                             <div className='spanLine ml-2'></div>
                         </div>
-                        <div className='clothesCollection flex-wrap px-9'>
+                        <div className='clothesCollection flex-wrap px-10'>
                             {clothes.slice(0, 12).map((dress) => (
-                                <div className='dress mt-7' key={dress._id}>
+                                <div className='dress mt-7 animateAppear' key={dress._id}>
                                     <Link to={`/item/${dress._id}`}>
                                         <div className='cloth'>
                                             <img src={dress.image} className='image'></img>
@@ -103,8 +104,8 @@ const Home = () => {
 
                     <div className='newSeason flex flex-wrap mt-35 mb-25 md:p-12 p-10'>
                         <div className='leftSide flex flex-col md:p-10 md:w-[52%]'>
-                            <p className='new1 text-4xl'>New Season Arrival</p>
-                            <p className='new2 text-2xl mt-3'>Get ready for the changing season with our latest collection. Up to 40% off on selected items.</p>
+                            <p className='new1 text-4xl animateAppear'>New Season Arrival</p>
+                            <p className='new2 text-2xl mt-3 animateAppear'>Get ready for the changing season with our latest collection. Up to 40% off on selected items.</p>
                             <Link to='/Men' className='w-[170px]' onClick={(e) => e.preventDefault()}>
                                 <motion.button
                                     onClick={() => {
@@ -116,24 +117,24 @@ const Home = () => {
                                     }}
                                     animate={isShaking ? { x: [-5, 5, -5, 5, 0] } : {}}
                                     transition={{ duration: 0.6, ease: "easeInOut" }}
-                                    className='mt-3 cursor-pointer p-3 mt-8'
+                                    className='mt-3 cursor-pointer p-3 mt-8 animateAppear'
                                 >
                                     Explore Collection
                                 </motion.button>
                             </Link>
 
                         </div>
-                        <div className='seasonImg mt-10 md:mt-0 w-[100%] md:w-[48%] md:h-[400px] h-[250px]' />
+                        <div className='seasonImg mt-10 md:mt-0 w-[100%] md:w-[48%] md:h-[400px] h-[250px] animateAppear'/>
                     </div>
 
                     <div className=''>
-                        <div className='boundLine flex'>
+                        <div className='boundLine flex animateAppear'>
                             <p className='text-center text-3xl'><span className='latest'>BEST</span> SELLERS</p>
                             <div className='spanLine ml-2'></div>
                         </div>
                         <div className='clothesCollection mt-10 flex-wrap'>
                             {bestSeller.slice(0, 4).map((bestItems) => (
-                                <div className='dress' key={bestItems._id}>
+                                <div className='dress animateAppear' key={bestItems._id}>
 
                                     <Link to={`/item/${bestItems._id}`}>
                                         <div className='cloth'>
@@ -148,13 +149,13 @@ const Home = () => {
                     </div>
 
                     <div className='mt-45 bg-gray-50 p-5'>
-                        <div className='flex customerRe md:mt-10 mt-8'>
+                        <div className='flex customerRe md:mt-10 mt-8 animateAppear'>
                             <p className='md:text-4xl text-3xl'>
                                 What Our Customers Say
                             </p>
                         </div>
                         <div className='flex flex-wrap allReview mt-10 mb-10 gap-10'>
-                            <div className='firstReview flex flex-col md:h-[190px] p-5 rounded-[10px] bg-white'>
+                            <div className='firstReview flex flex-col md:h-[190px] p-5 rounded-[10px] bg-white animateAppear'>
                                 <div className="flex mt-2 mb-1">
                                     {[...Array(5)].map((_, i) => (
                                         <Star key={i} className="w-4 md:w-5 h-4 md:h-5 fill-current text-yellow-400" />
@@ -165,7 +166,7 @@ const Home = () => {
                                     Will definitely shop here again!"</p>
                                 <p className='mt-2 ml-1'>-Sara JohnSon</p>
                             </div>
-                            <div className='firstReview flex flex-col md:h-[190px] p-2 rounded-[10px] bg-white'>
+                            <div className='firstReview flex flex-col md:h-[190px] p-2 rounded-[10px] bg-white animateAppear'>
                                 <div className="flex mt-2 mb-1">
                                     {[...Array(5)].map((_, i) => (
                                         <Star key={i} className="w-4 md:w-5 h-4 md:h-5 fill-current text-yellow-400" />
@@ -176,7 +177,7 @@ const Home = () => {
                                     Will definitely shop here again!"</p>
                                 <p className='mt-2 ml-1'>-Sara JohnSon</p>
                             </div>
-                            <div className='firstReview flex flex-col md:h-[190px] p-2 rounded-[10px] bg-white'>
+                            <div className='firstReview flex flex-col md:h-[190px] p-2 rounded-[10px] bg-white animateAppear'>
                                 <div className="flex mt-2 mb-1">
                                     {[...Array(5)].map((_, i) => (
                                         <Star key={i} className="w-4 md:w-5 h-4 md:h-5 fill-current text-yellow-400" />
@@ -191,11 +192,11 @@ const Home = () => {
                     </div>
 
                     <div className='flex flex-wrap lastBox md:mt-25 mt-20 gap-10'>
-                        <div className='menBox md:h-[300px] h-[180px]'>
+                        <div className='menBox md:h-[300px] h-[180px] animateAppear'>
                             <button className='px-7 py-3 cursor-pointer font-semibold'>Shop</button>
                             <div className='boxBlur'></div>
                         </div>
-                        <div className='womenBox md:h-[300px] h-[180px]'>
+                        <div className='womenBox md:h-[300px] h-[180px] animateAppear'>
                         <button className='px-7 py-3 cursor-pointer font-semibold'>Shop</button>
                             <div className='boxBlur'></div>
                         </div>
