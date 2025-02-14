@@ -164,7 +164,7 @@ const Home = () => {
                                 <p className='text-gray-500'>"Exceptional quality and style.
                                     The attention to detail and customer service is outstanding.
                                     Will definitely shop here again!"</p>
-                                <p className='mt-2 ml-1'>-Sara JohnSon</p>
+                                <p className='mt-2 ml-1'>-Rahul Yadav</p>
                             </div>
                             <div className='firstReview flex flex-col md:h-[190px] p-2 rounded-[10px] bg-white animateAppear'>
                                 <div className="flex mt-2 mb-1">
@@ -175,7 +175,7 @@ const Home = () => {
                                 <p className='text-gray-500'>"Exceptional quality and style.
                                     The attention to detail and customer service is outstanding.
                                     Will definitely shop here again!"</p>
-                                <p className='mt-2 ml-1'>-Sara JohnSon</p>
+                                <p className='mt-2 ml-1'>-Rahul Yadav</p>
                             </div>
                             <div className='firstReview flex flex-col md:h-[190px] p-2 rounded-[10px] bg-white animateAppear'>
                                 <div className="flex mt-2 mb-1">
@@ -186,7 +186,7 @@ const Home = () => {
                                 <p className='text-gray-500'>"Exceptional quality and style.
                                     The attention to detail and customer service is outstanding.
                                     Will definitely shop here again!"</p>
-                                <p className='mt-2 ml-1'>-Sara JohnSon</p>
+                                <p className='mt-2 ml-1'>-Rahul Yadav</p>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import Men from "../src/pages/Men";
 import SingleItem from "../src/pages/singleItem";
 import Footer from './components/Footer';
 import './App.css'
+import Allitems from './pages/Allitems';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/Men" element={<Men/>}></Route>
         <Route path="/item/:id" element={<SingleItem/>}></Route>
+        <Route path="/allTrend" element={<Allitems/>}></Route>
       </Routes>
       <Footer/>
     </Router>

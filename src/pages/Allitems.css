@@ -1,0 +1,51 @@
+.allItems {
+    justify-content: center;
+    align-items: start;
+}
+
+@media (max-width: 1000px) {
+    .dress1 {
+        height: 260px;
+        width: 200px;
+    }    
+}
+
+@media (max-width:768px) {
+    .allItems{
+        padding: 40px;
+    }
+
+    .dress1 {
+        height: 200px;
+        width: 145px;
+    }    
+}
+
+@media (max-width: 400px) {
+    .allItems {
+        padding: 20px;
+    }
+
+    .dress1 {
+        height: 200px;
+        width: 140px;
+    }    
+}
+
+.spanLine2 {
+    height: 2.4px;
+    width: 50px;
+    background-color: black;
+}
+
+.dress1 p {
+    color: rgb(55, 65, 81);
+}
+
+.headerAll {
+
+}
+
+.itemsHere {
+
+}
