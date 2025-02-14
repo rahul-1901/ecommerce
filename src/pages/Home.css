@@ -1,0 +1,332 @@
+.startPart {
+    background-image: url('../assets/homeStart.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: 69% 25%; */
+    height: 700px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.blurLayer {
+    background-color: rgba(32, 31, 31, 0.305);
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+}
+
+.attention h1 {
+    font-weight: 700;
+}
+
+.attention p {
+    font-weight: 500;
+}
+
+.attention button {
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    padding: 7px;
+    width: 100px;
+}
+
+.attention button:hover {
+    background-color: rgba(255, 255, 255, 0.421);
+    color: white;
+}
+
+.diffSection {
+    align-items: center;
+    justify-content: center;  
+    margin-bottom: 100px;  
+}
+
+.redSec{
+    height: 480px;
+    width: 350px;
+    background-image: url('../assets/luxury.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.firstBlur{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top:0;
+    right: -100%;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgba(141, 141, 158, 0.373);
+    transition: right 0.5s ease;
+}
+
+.firstBlur p{
+    font-weight: 600;
+}
+
+.firstBlur a{
+    font-weight: 500;
+    transition: text-decoration 0.5s ease;
+    width: 50px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.redSec:hover .firstBlur{
+    right: 0;
+}
+
+.secSec{
+    height: 480px;
+    width: 350px;
+    background-image: url('../assets/seasonal.png');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.first1Blur{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top:-100%;
+    right: 0;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgba(141, 141, 158, 0.373);
+    transition: top 0.5s ease;
+}
+
+.secSec:hover .first1Blur {
+    top: 0;
+}
+
+.first1Blur p{
+    font-weight: 600;
+}
+
+.first1Blur a{
+    font-weight: 500;
+    transition: text-decoration 0.5s ease;
+    width: 50px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.thirdSec{
+    height: 480px;
+    width: 350px;
+    background-image: url('../assets/accessories.png');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.first2Blur{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: -100%;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgba(141, 141, 158, 0.373);
+    transition: left 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thirdSec:hover .first2Blur {
+    left: 0;
+}
+
+.first1Blur p{
+    font-weight: 600;
+}
+
+.first1Blur a{
+    font-weight: 500;
+    transition: text-decoration 0.5s ease;
+    width: 50px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.spanLine {
+    height: 2px;
+    width: 40px;
+    background-color: black;
+}
+
+.boundLine {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(33, 38, 48);
+    font-weight: 600;
+}
+
+.latest {
+    color: rgb(107, 114, 128);
+}
+
+.clothesCollection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.dress {
+    height: 320px;
+    width: 250px;
+}
+
+.dress p {
+    color: rgb(55, 65, 81);
+}
+
+.cloth {
+    overflow: hidden;
+    height: 100%;
+}
+
+.image {
+    object-fit: cover;
+    height: 100%;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.newSeason {
+    background-color: rgb(21, 25, 36);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.leftSide .new1 {
+    color: white;
+    font-weight: 700;
+}
+
+.leftSide .new2 {
+    color: rgb(234, 232, 232);
+}
+
+.leftSide button {
+    background-color: rgba(255, 255, 255, 0.927);
+    width: 170px;
+}
+
+.seasonImg {
+    background-image: url('../assets/collect.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 2/1;
+}
+
+.customerRe {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.allReview {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.firstReview {
+    aspect-ratio: 2/1;
+    justify-content: center;
+}
+
+.lastBox {
+    justify-content: space-evenly;
+}
+
+.menBox {
+    background-image: url("../assets/menBox.png");
+    background-size: cover;
+    background-position: 69%;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 2/1;
+}
+
+.menBox button {
+    position: absolute;
+    background-color: rgba(246, 246, 246, 0.786);
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.menBox button:hover {
+    background-color: rgba(0, 0, 0, 0.499);
+    color: whitesmoke;
+}
+
+.boxBlur {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 11, 0.242);
+}
+
+.womenBox {
+    background-image: url("../assets/womenBox.png");
+    background-size: cover;
+    background-position: 69%;
+    background-repeat: no-repeat;
+    aspect-ratio: 2/1;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.womenBox button {
+    position: absolute;
+    background-color: rgba(246, 246, 246, 0.786);
+    z-index: 100;
+    transition: all 0.5s ease;
+}
+
+.womenBox button:hover {
+    background-color: rgba(0, 0, 0, 0.499);
+    color: whitesmoke;
+}
+
+.boxBlur {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 11, 11, 0.242);
+}
