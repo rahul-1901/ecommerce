@@ -191,7 +191,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-wrap lastBox md:mt-25 mt-20 gap-10'>
+                    <div className='flex flex-wrap lastBox md:mt-25 mt-20 gap-10 mb-30'>
                         <div className='menBox md:h-[300px] h-[180px] animateAppear'>
                             <Link to="/allTrend" className='aa'>
                                 <button className='px-7 py-3 cursor-pointer font-semibold'>Shop</button>

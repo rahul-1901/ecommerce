@@ -1,0 +1,84 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ShoppingBag, LogIn } from 'lucide-react';
+import loginShop from "../assets/loginShop.png";
+
+const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    return (
+        <div className="min-h-screen flex">
+            <div className="hidden lg:flex lg:w-1/2 bg-red-50">
+                <div className="w-full h-full flex items-center justify-center p-12">
+                    <img
+                        src={loginShop}
+                        alt="Shopping illustration"
+                        className="w-full max-w-lg object-contain"
+                    />
+                </div>
+            </div>
+
+            <div className="w-full lg:w-2/3 flex items-center justify-center p-8 bg-red-400">
+                <div className="w-full max-w-md space-y-8">
+                    <div>
+                        <div className="flex items-center gap-2 text-gray-900">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                                Login Here
+                            </h2>
+                            <LogIn className="mt-1 h-8 w-8 text-coral-500" />
+                        </div>
+                        <p className="mt-2 text-sm text-gray-800">
+                            Don't have an account?{' '}
+                            <Link to="/signup" className="text-coral-700 hover:text-coral-500 font-medium signupLogin">
+                                Sign up
+                            </Link>
+                        </p>
+                    </div>
+
+                    <form className="space-y-6">
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-medium text-gray-900">
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                                className="mt-1 block w-full px-4 py-3 rounded-lg bg-gray-50 border-transparent focus:border-none  focus:outline-2 focus:ring-0"
+                                placeholder="abc@gmail.com"
+                            />
+                        </div>
+
+                        <div>
+                            <label htmlFor="password" className="block text-sm font-medium text-gray-900">
+                                Password
+                            </label>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                                className="mt-1 block w-full px-4 py-3 rounded-lg bg-gray-50 border-transparent focus:border-none  focus:outline-2 focus:ring-0"
+                                placeholder="Enter your password"
+                            />
+                        </div>
+
+                        <div className="flex items-center justify-between mt-[-18px]">
+                            <Link to="/forgot-password" className="text-sm text-gray-900 hover:text-coral-500 signupLogin">
+                                Forgot Password?
+                            </Link>
+                        </div>
+
+                        <button className="w-full py-3 px-4 rounded-lg text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral-500 transition-colors cursor-pointer">
+                            Sign in
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Login;

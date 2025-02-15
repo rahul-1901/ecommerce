@@ -10,6 +10,7 @@ import Allitems from './pages/Allitems';
 import CommingSoon from './components/ComingSoon';
 import HideNavbar from "../src/components/HideNavbar";
 import About from './pages/About';
+import Login from "../src/pages/Login";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/allTrend" element={<Allitems />}></Route>
           <Route path="/comming" element={<CommingSoon />}></Route>
           <Route path="/about" element={<About/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
         </Routes>
         <HideNavbar>
           <Footer />

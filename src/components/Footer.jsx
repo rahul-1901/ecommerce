@@ -15,7 +15,7 @@ import {
 
 const Footer = () => {
     return (
-        <div className="flex flex-col mt-30">
+        <div className="flex flex-col">
             <div className="flex-grow"></div>
             <footer className="bg-gray-900 text-gray-300">
                 <div className="container mx-auto px-4 py-12">

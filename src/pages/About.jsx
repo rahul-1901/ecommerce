@@ -77,7 +77,7 @@ const About = () => {
                             <div className="relative animateAppear">
                                 <img
                                     src={aboutUs}
-                                    alt="Team collaboration"
+                                    alt="About*Us"
                                     className="rounded-lg shadow-xl"
                                 />
                             </div>
@@ -113,7 +113,7 @@ const About = () => {
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                                 {ourNumbers.map((stat, index) => (
                                     <div key={index} className="text-center animateAppear">
-                                        <p className="text-4xl font-bold text-indigo-600 mb-2">{stat.number}</p>
+                                        <p className="text-4xl font-bold text-gray-700 mb-2">{stat.number}</p>
                                         <p className="text-gray-600">{stat.label}</p>
                                     </div>
                                 ))}
@@ -121,7 +121,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="py-16">
+                    <div className="py-16 mb-10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="text-center mb-12">
                                 <h2 className="text-3xl font-bold text-gray-900 animateAppear">Join Our Journey</h2>
@@ -132,7 +132,7 @@ const About = () => {
 
                             <div className="flex justify-center mt-[-20px]">
                                 <Link to="/" className='linkComp'>
-                                    <button className="px-6 py-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors duration-300 flex items-center gap-2 animateAppear cursor-pointer">
+                                    <button className="px-6 py-4 bg-gray-700 text-white rounded-full hover:bg-gray-900 transition-colors duration-300 flex items-center gap-2 animateAppear cursor-pointer">
                                         <Package className="h-5 w-5" />
                                         Start Shopping
                                     </button>

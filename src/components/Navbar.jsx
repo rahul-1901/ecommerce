@@ -7,45 +7,47 @@ import "./Navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-      <div className='navbarBody w-full top-0 left-0 fixed z-9999'>
-        <div className='navbarContent mx-auto shadow-md p-5 bg-white'>
+    <div className='navbarBody w-full top-0 left-0 fixed z-9999'>
+      <div className='navbarContent mx-auto shadow-md p-5 bg-white'>
 
-          <div className='navbarLogo flex items-center md:px-10'>
-            <Link to="/" className='logoName md:text-2xl text-3xl font-bold'>
-              <span>PreMart</span>
-            </Link>
-          </div>
-
-          <div className='navbarRoutes md:flex items-center text-xl hidden'>
-            <Link to="/" className='routeMain'>
-              Home
-            </Link>
-            <Link to="/allTrend" className='routeMain'>
-              Collection
-            </Link>
-            {/* <Link to="/Men" className='routeMain'>
-              New
-            </Link> */}
-            <Link to="/about" className='routeMain'>
-              About
-            </Link>
-          </div>
-
-          <div className='shoppingIcons md:flex items-center text-xl hidden'>
-            <Search />
-            <User />
-            <ShoppingCart />
-          </div>
-
-          <div className='flex md:hidden items-center'>
-            <button onClick={() => { setIsOpen(!isOpen) }}>
-              {isOpen ? <X className='h-8 w-8 z-1000' /> : <Menu className='h-8 w-8' />}
-            </button>
-          </div>
+        <div className='navbarLogo flex items-center md:px-10'>
+          <Link to="/" className='logoName md:text-2xl text-3xl font-bold'>
+            <span>PreMart</span>
+          </Link>
         </div>
 
-        {isOpen && (
-          <motion.div
+        <div className='navbarRoutes md:flex items-center text-xl hidden'>
+          <Link to="/" className='routeMain'>
+            Home
+          </Link>
+          <Link to="/allTrend" className='routeMain'>
+            Collection
+          </Link>
+          {/* <Link to="/Men" className='routeMain'>
+              New
+            </Link> */}
+          <Link to="/about" className='routeMain'>
+            About
+          </Link>
+        </div>
+
+        <div className='shoppingIcons md:flex items-center text-xl hidden'>
+          <Search />
+          <Link to="/login">
+            <User />
+          </Link>
+          <ShoppingCart />
+        </div>
+
+        <div className='flex md:hidden items-center'>
+          <button onClick={() => { setIsOpen(!isOpen) }}>
+            {isOpen ? <X className='h-8 w-8 z-1000' /> : <Menu className='h-8 w-8' />}
+          </button>
+        </div>
+      </div>
+
+      {isOpen && (
+        <motion.div
           initial={{ x: "100%" }}
           animate={{ x: isOpen ? "0%" : "100%" }}
           transition={{ type: "tween", duration: 0.4 }}
@@ -66,8 +68,8 @@ const Navbar = () => {
             </Link>
           </div>
         </motion.div>
-        )}
-      </div>
+      )}
+    </div>
   )
 }
 

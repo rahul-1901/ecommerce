@@ -360,3 +360,11 @@ a:hover {
 .linkComp:hover {
     text-decoration: none;
 }
+
+.signupLogin {
+    text-decoration: none;
+}
+
+.signupLogin:hover {
+    text-decoration: none;
+}

@@ -98,7 +98,7 @@ const Allitems = () => {
                         </div>
                     </div>
 
-                    <div className='allCollection flex flex-col'>
+                    <div className='allCollection flex flex-col mb-30'>
                         <div className='headerAll'>
                             <div className='text-center text-3xl flex items-center'><span className='latest'>ALL</span> COLLECTIONS <div className='spanLine2 ml-1'></div></div>
                         </div>
