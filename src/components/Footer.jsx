@@ -19,9 +19,9 @@ const Footer = () => {
             <div className="flex-grow"></div>
             <footer className="bg-gray-900 text-gray-300">
                 <div className="container mx-auto px-4 py-12">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* About Section */}
-                        <div>
+                        <div className='lg:ml-10'>
                             <h4 className="text-xl font-bold text-white mb-4">PreMart</h4>
                             <p className="mb-4 text-sm leading-relaxed">
                                 Your premier destination for quality products at competitive prices.
@@ -70,25 +70,6 @@ const Footer = () => {
                                 <li className="flex items-center gap-3">
                                     <Mail size={20} />
                                     <span>support@premart.com</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        {/* Why Choose Us */}
-                        <div>
-                            <h4 className="text-xl font-bold text-white mb-4">Why Choose Us</h4>
-                            <ul className="space-y-4">
-                                <li className="flex items-center gap-3">
-                                    <Truck size={20} className="text-blue-400" />
-                                    <span>Free shipping on orders over $50</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <ShieldCheck size={20} className="text-blue-400" />
-                                    <span>100% Secure Payment</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <CreditCard size={20} className="text-blue-400" />
-                                    <span>Multiple Payment Options</span>
                                 </li>
                             </ul>
                         </div>
