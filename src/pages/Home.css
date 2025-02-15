@@ -156,12 +156,26 @@ a:hover {
 
 .first1Blur p{
     font-weight: 600;
+    color: rgb(255, 254, 254);
 }
 
 .first1Blur a{
     font-weight: 500;
     transition: text-decoration 0.5s ease;
     width: 50px;
+    color: whitesmoke;
+}
+
+.first2Blur p{
+    font-weight: 600;
+    color: rgb(132, 63, 23);
+}
+
+.first2Blur a{
+    font-weight: 500;
+    transition: text-decoration 0.5s ease;
+    width: 50px;
+    color: rgb(132, 63, 23);
 }
 
 a:hover {
@@ -280,8 +294,12 @@ a:hover {
     aspect-ratio: 2/1;
 }
 
-.menBox button {
+.menBox .aa{
     position: absolute;
+    z-index: 100;
+}
+
+.menBox button {
     background-color: rgba(246, 246, 246, 0.786);
     z-index: 100;
     transition: all 0.5s ease;
@@ -312,8 +330,12 @@ a:hover {
     justify-content: center;
 }
 
-.womenBox button {
+.womenBox .aa{
     position: absolute;
+    z-index: 100;
+}
+
+.womenBox button {
     background-color: rgba(246, 246, 246, 0.786);
     z-index: 100;
     transition: all 0.5s ease;
@@ -329,4 +351,12 @@ a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(11, 11, 11, 0.242);
+}
+
+.linkComp {
+    text-decoration: none;
+}
+
+.linkComp:hover {
+    text-decoration: none;
 }

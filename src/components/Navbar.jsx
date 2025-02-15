@@ -23,10 +23,10 @@ const Navbar = () => {
             <Link to="/allTrend" className='routeMain'>
               Collection
             </Link>
-            <Link to="/Men" className='routeMain'>
+            {/* <Link to="/Men" className='routeMain'>
               New
-            </Link>
-            <Link to="/Men" className='routeMain'>
+            </Link> */}
+            <Link to="/about" className='routeMain'>
               About
             </Link>
           </div>

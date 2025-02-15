@@ -65,19 +65,19 @@ const Home = () => {
                         <div className='redSec animateAppear'>
                             <div className='firstBlur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
-                                <a href="/Men" className=''>Shop</a>
+                                <a href="/comming" className=''>Shop</a>
                             </div>
                         </div>
                         <div className='secSec animateAppear'>
                             <div className='first1Blur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
-                                <a href="/Men" className=''>Shop</a>
+                                <a href="/comming" className=''>Shop</a>
                             </div>
                         </div>
                         <div className='thirdSec animateAppear'>
                             <div className='first2Blur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
-                                <a href="/Men" className=''>Shop</a>
+                                <a href="/comming" className=''>Shop</a>
                             </div>
                         </div>
                     </div>
@@ -106,7 +106,7 @@ const Home = () => {
                         <div className='leftSide flex flex-col md:p-10 md:w-[52%]'>
                             <p className='new1 text-4xl animateAppear'>New Season Arrival</p>
                             <p className='new2 text-2xl mt-3 animateAppear'>Get ready for the changing season with our latest collection. Up to 40% off on selected items.</p>
-                            <Link to='/Men' className='w-[170px]' onClick={(e) => e.preventDefault()}>
+                            <Link to="/comming" className='w-[170px]' onClick={(e) => e.preventDefault()}>
                                 <motion.button
                                     onClick={() => {
                                         setIsShaking(true);
@@ -124,7 +124,7 @@ const Home = () => {
                             </Link>
 
                         </div>
-                        <div className='seasonImg mt-10 md:mt-0 w-[100%] md:w-[48%] md:h-[400px] h-[250px] animateAppear'/>
+                        <div className='seasonImg mt-10 md:mt-0 w-[100%] md:w-[48%] md:h-[400px] h-[250px] animateAppear' />
                     </div>
 
                     <div className=''>
@@ -193,11 +193,15 @@ const Home = () => {
 
                     <div className='flex flex-wrap lastBox md:mt-25 mt-20 gap-10'>
                         <div className='menBox md:h-[300px] h-[180px] animateAppear'>
-                            <button className='px-7 py-3 cursor-pointer font-semibold'>Shop</button>
+                            <Link to="/allTrend" className='aa'>
+                                <button className='px-7 py-3 cursor-pointer font-semibold'>Shop</button>
+                            </Link>
                             <div className='boxBlur'></div>
                         </div>
                         <div className='womenBox md:h-[300px] h-[180px] animateAppear'>
-                        <button className='px-7 py-3 cursor-pointer font-semibold'>Shop</button>
+                            <Link to="/allTrend" className='aa'>
+                                <button className='px-7 py-3 cursor-pointer font-semibold'>Shop</button>
+                            </Link>
                             <div className='boxBlur'></div>
                         </div>
                     </div>
