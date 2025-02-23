@@ -5,7 +5,7 @@ import { Star, ShoppingCart, Loader2 } from 'lucide-react';
 import axios from 'axios';
 import { API_BASE_URL } from '../backendApi/api';
 
-const SingleItem = () => {
+const EachItem = () => {
     const [itemShow, setItemShow] = useState(null);
     const { id } = useParams();
     const [selectedSize, setSelectedSize] = useState('');
@@ -139,4 +139,4 @@ const SingleItem = () => {
     );
 }
 
-export default SingleItem;
+export default EachItem;
