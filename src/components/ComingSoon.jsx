@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./CommingSoon.css";
 import rocket from "../assets/rocket.png";
 import { getClothes } from '../backendApi/api';
+import Loader from "../components/Loader";
 
 const ComingSoon = () => {
     const [countTime, setCountTime] = useState([
@@ -49,20 +50,9 @@ const ComingSoon = () => {
     return (
         <>
             {showLoader ? (
-                <div className="min-h-screen flex items-center justify-center mt-[-70px]">
-                    <div className="flex items-center gap-2">
-                        {/* First dot */}
-                        <div className="w-4 h-4 bg-black rounded-full animate-[bounce_1s_infinite_0ms]" />
-
-                        {/* Second dot */}
-                        <div className="w-4 h-4 bg-black rounded-full animate-[bounce_1s_infinite_200ms]" />
-
-                        {/* Third dot */}
-                        <div className="w-4 h-4 bg-black rounded-full animate-[bounce_1s_infinite_400ms]" />
-                    </div>
-                </div>
+                <Loader/>
             ) : (
-                <div className='commingSoon bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 min-h-screen mt-[-70px] flex flex-col gap-2'>
+                <div className='commingSoon bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 min-h-screen flex flex-col gap-2'>
                     <h1 className='md:text-7xl text-5xl'>Comming Soon</h1>
                     <p className='md:text-xl text-sm'>We're crafting something special just for you.</p>
                     <div className="mt-4 grid grid-cols-4 gap-4 max-w-2xl mx-auto">

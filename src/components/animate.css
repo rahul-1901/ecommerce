@@ -12,7 +12,7 @@
 .animateAppear {
     animation: animate linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 50%;
 }
 
 ::-webkit-scrollbar {
@@ -26,4 +26,34 @@
 ::-webkit-scrollbar-thumb {
     background: #111827;
     border-radius: 10px;
+}
+
+.slideLeft {
+    position: relative;
+    animation: slides 1s linear;
+}
+
+.slideRight {
+    position: relative;
+    animation: slidesSecond 1s linear;
+}
+
+@keyframes slides {
+    0% {
+        opacity: 0;
+        left: -100%;
+    } 100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+@keyframes slidesSecond {
+    from {
+        right: -100%;
+        opacity: 0;
+    } to {
+        opacity: 1;
+        right: 0;
+    }
 }

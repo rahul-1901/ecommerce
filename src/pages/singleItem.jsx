@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { itemById } from '../backendApi/api';
 import { useParams } from 'react-router-dom';
 import { Star, ShoppingCart, Loader2 } from 'lucide-react';
+import axios from 'axios';
+import { API_BASE_URL } from '../backendApi/api';
 
-const singleItem = () => {
+const SingleItem = () => {
     const [itemShow, setItemShow] = useState(null);
     const { id } = useParams();
+    const [selectedSize, setSelectedSize] = useState('');
+    const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
 
     const fetchedItem = async () => {
         try {
@@ -19,22 +23,28 @@ const singleItem = () => {
         }
     }
 
+    const handlePurchase = async(id) => {
+        try {
+            const response = await axios.post(`${API_BASE_URL}/api/user/clothes/${id}`);
+            console.log(response.data);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     useEffect(() => {
         fetchedItem();
     }, [id])
 
-    const getRandom = Math.floor(Math.random() * (200 - 90 + 1)) + 90;
+    const getRandom = Math.floor(Math.random() * (90 - 0 + 1)) + 0;
     const realPrice = itemShow ? itemShow.price + getRandom : "Loading...";
     // console.log(realPrice);
     const discountPercentage = itemShow ? (realPrice - itemShow.price) / (itemShow.price) : "Loading...";
     // console.log(discountPercentage * 100)
     const randomPurchase = Math.floor(Math.random() * (560 - 300 + 1)) + 300;
 
-    const [selectedSize, setSelectedSize] = useState('M');
-    const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
-
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen mt-[70px]">
             {itemShow ? (
                 <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
@@ -98,7 +108,9 @@ const singleItem = () => {
                                 </div>
                             </div>
 
-                            <button className="mt-6 md:mt-8 w-full md:w-48 bg-black text-white py-3 px-6 rounded hover:bg-gray-900 transition-colors text-sm font-medium cursor-pointer">
+                            <button
+                            onClick={() => handlePurchase(itemShow._id)}
+                            className="mt-6 md:mt-8 w-full md:w-48 bg-black text-white py-3 px-6 rounded hover:bg-gray-900 transition-colors text-sm font-medium cursor-pointer">
                                 ADD TO CART
                             </button>
                             <div className="mt-6 md:mt-8 space-y-2 text-sm md:text-base text-gray-600">
@@ -127,4 +139,4 @@ const singleItem = () => {
     );
 }
 
-export default singleItem
+export default SingleItem

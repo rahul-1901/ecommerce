@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, matchPath } from 'react-router-dom';
 
 const ShowNavbar = ({ children }) => {
     const location = useLocation();
     const [showNavbar, setShowNavbar] = useState(true);
 
-    const navVisible = ["/", "/Men", "/item/:id", "/allTrend", "/about", "/login"];
+    const navVisible = ["/", "/Men", "/item/:id", "/allTrend", "/about", "/login", "/signUp"];
 
     useEffect(() => {
         // console.log(location);
-        if (!navVisible.includes(location.pathname)) {
+        const isDynamicRoute = matchPath({ path: "/item/:id", exact: true }, location.pathname);
+        if (!navVisible.includes(location.pathname) && !isDynamicRoute) {
             setShowNavbar(false);
         } else {
             setShowNavbar(true);

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+.backGround {
+    background-color:  #94dffb80;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centeredAll {
+    align-items: center;
+}
+
+.backGround h1 {
+    font-weight: 400;
+    color: rgb(35, 96, 61);
+}
+
+.backGround h2 {
+    color: rgb(236, 105, 12);
+}
+
+.textNotFound {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}

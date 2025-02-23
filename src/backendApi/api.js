@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = "http://localhost:3000";
+export const API_BASE_URL = "http://localhost:3000";
 
 export const getClothes = async () => {
     try {
@@ -31,3 +31,17 @@ export const itemById = async (id) => {
         throw Error;
     }
 }
+
+// export const userSignUp = async (userData) => {
+//     try {
+//         const response = await axios.post(`${API_BASE_URL}/api/user/signUp`, userData);
+//         toast.success(response.data.message)
+//         return response.data.message;
+//     } catch (error) {
+//         console.log("Error in api SignUp(frontend)...");
+//         const response1 = error;
+//         toast.error(response1.response.data.message)
+//         console.log(error)
+//         return response1.response.data.message;
+//     }
+// }

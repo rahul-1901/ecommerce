@@ -48,7 +48,7 @@ const About = () => {
     return (
         <>
             {loader ? (
-                <div className="min-h-screen bg-white">
+                <div className="min-h-screen bg-white mt-[70px]">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">
@@ -142,7 +142,7 @@ const About = () => {
                     </div>
                 </div>
             ) : (
-                <div className="min-h-screen flex items-center justify-center">
+                <div className="min-h-screen flex items-center justify-center mt-[70px]">
                     <div className="flex items-center gap-2">
                         {/* First dot */}
                         <div className="w-4 h-4 bg-black rounded-full animate-[bounce_1s_infinite_0ms]" />

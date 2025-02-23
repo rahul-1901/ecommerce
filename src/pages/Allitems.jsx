@@ -66,7 +66,7 @@ const Allitems = () => {
     return (
         <div>
             {forLoader ? (
-                <div className='flex md:flex-row flex-col allItems gap-10 md:p-12'>
+                <div className='flex md:flex-row flex-col allItems gap-10 md:p-12 mt-[70px]'>
                     <div className='flex flex-col gap-2'>
                         <p className='text-2xl'>FILTERS</p>
                         <div className='border-[2px] border-[solid] border-[gray] md:px-3 md:py-3 md:pr-25 px-3 py-3 pr-55'>
@@ -122,7 +122,7 @@ const Allitems = () => {
                     </div>
                 </div>
             ) : (
-                <div className="min-h-screen flex items-center justify-center">
+                <div className="min-h-screen flex items-center justify-center mt-[70px]">
                     <div className="flex items-center gap-2">
                         {/* First dot */}
                         <div className="w-4 h-4 bg-black rounded-full animate-[bounce_1s_infinite_0ms]" />

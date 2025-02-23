@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./Home.css";
 import { Loader2, Star } from 'lucide-react';
 import { bestSellers, getClothes } from '../backendApi/api';
@@ -12,6 +12,7 @@ const Home = () => {
     const [showitems, setShowitems] = useState(false);
     const [bestSeller, setBestSeller] = useState([]);
 
+    const navigate = useNavigate();
     const itemsFetched = async () => {
         try {
             const response = await getClothes();
@@ -42,14 +43,18 @@ const Home = () => {
         <>
             {showitems ? (
                 <div>
-                    <div className='startPart flex md:bg-[69%_25%] bg-center'>
+                    <div className='startPart flex md:bg-[69%_25%] bg-center mt-[70px]'>
                         <div className='attention text-white z-200 flex flex-col items-center md:mt-10'>
                             <h1 className='md:text-5xl text-4xl'>Summer Collection</h1>
                             <p className='md:text-2xl text-xl'>Discover the latest trends</p>
                             <motion.button
                                 onClick={() => {
                                     setIsShaking(true);
-                                    setTimeout(() => setIsShaking(false), 700);
+                                    setTimeout(() => 
+                                        setIsShaking(false), 1000);
+                                    setTimeout(() => {
+                                        navigate("/allTrend")
+                                    }, 500)
                                 }}
                                 animate={isShaking ? { x: [-5, 5, -5, 5, 0] } : {}}
                                 transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -207,7 +212,7 @@ const Home = () => {
                     </div>
                 </div>
             ) : (
-                <div className="min-h-screen flex items-center justify-center">
+                <div className="min-h-screen flex items-center justify-center mt-[70px]">
                     <div className="flex items-center gap-2">
                         {/* First dot */}
                         <div className="w-4 h-4 bg-black rounded-full animate-[bounce_1s_infinite_0ms]" />
