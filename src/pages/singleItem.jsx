@@ -139,4 +139,4 @@ const SingleItem = () => {
     );
 }
 
-export default SingleItem
+export default SingleItem;
