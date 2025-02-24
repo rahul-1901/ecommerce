@@ -5,7 +5,6 @@ import loginShop from "../assets/loginShop.png";
 import { API_BASE_URL } from '../backendApi/api';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
@@ -18,24 +17,42 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`${API_BASE_URL}/api/user/login`, userData);
-            toast.success(response.data.message, { autoClose: 1000 });
-            setTimeout(() => {
-                navigate("/")
-            }, 2000);
-            console.log(response)
+            if (localStorage.getItem("userToken")) {
+                toast.warn("LogOut First", { autoClose: 1000 });
+            } else {
+                const response = await axios.post(`${API_BASE_URL}/api/user/login`, userData);
+                toast.success(response.data.message, { autoClose: 1000 });
+                setTimeout(() => {
+                    navigate("/")
+                }, 2000);
+                console.log(response)
+                localStorage.setItem("userToken", response.data.jwtToken);
+                console.log(localStorage.getItem("userToken"))
+            }
         } catch (error) {
             console.log(error)
             const response1 = error
-            toast.error(response1.response.data.message, {autoClose: 1000})
+            toast.error(response1.response.data.message, { autoClose: 1000 })
         }
+    }
+
+    const handleLogout = () => {
+        localStorage.removeItem("userToken");
+        if(localStorage.getItem("userToken")) {
+            console.log(localStorage.getItem("userToken"));
+        }
+        console.log(localStorage)
+    }
+
+    const erconsole = () => {
+        console.log(localStorage);
     }
 
     const handleChange = (e) => {
         // const name = e.target.name;
         // const value = e.target.value;
-        const {name, value} = e.target;
-        setUserData({...userData, [name]: value})
+        const { name, value } = e.target;
+        setUserData({ ...userData, [name]: value })
     }
 
     return (
@@ -104,16 +121,26 @@ const Login = () => {
                             </Link>
                         </div>
 
-                        <button 
-                        type='submit'
-                        onClick={handleLogin}
-                        className="w-full py-3 px-4 rounded-lg text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral-500 transition-colors cursor-pointer">
+                        <button
+                            type='submit'
+                            onClick={handleLogin}
+                            className="w-full py-3 px-4 rounded-lg text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral-500 transition-colors cursor-pointer">
                             Sign in
                         </button>
                     </form>
+                    <button
+                            onClick={erconsole}
+                            className="w-full py-3 px-4 rounded-lg text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral-500 transition-colors cursor-pointer">
+                            Sign in
+                        </button>
+                        <button
+                            onClick={handleLogout}
+                            className="w-full py-3 px-4 rounded-lg text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral-500 transition-colors cursor-pointer">
+                            Sign in
+                        </button>
                 </div>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 };

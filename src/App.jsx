@@ -14,6 +14,7 @@ import SignUp from "../src/pages/SignUp";
 import NotFound from '../src/pages/NotFound';
 import EachItem from '../src/pages/EachItem';
 import ScrollToTop from "./components/ScrollToTop";
+import Cart from "../src/pages/Cart";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/login" element={<Login />} caseSensitive></Route>
           <Route path="/signUp" element={<SignUp />} caseSensitive></Route>
           <Route path="*" element={<NotFound />} caseSensitive></Route>
+          <Route path="/cart" element={<Cart/>} caseSensitive></Route>
         </Routes>
         <HideNavbar>
           <Footer />

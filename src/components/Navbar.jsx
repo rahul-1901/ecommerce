@@ -3,9 +3,19 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { ShoppingCart, Search, User, X, Menu } from 'lucide-react';
 import { motion } from "framer-motion";
 import "./Navbar.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const handleExcess = async () => {
+    if (!localStorage.getItem("userToken")) {
+      toast.error("Login first...", {autoClose: 1000})
+    } else {
+      navigate('/cart');
+    }
+  }
   return (
     <div className='navbarBody w-full top-0 left-0 fixed z-9999'>
       <div className='navbarContent mx-auto shadow-md p-5 bg-white'>
@@ -36,7 +46,9 @@ const Navbar = () => {
           <Link to="/login">
             <User />
           </Link>
-          <ShoppingCart />
+          <button onClick={() => handleExcess()} className='cursor-pointer'>
+            <ShoppingCart /> 
+          </button>
         </div>
 
         <div className='flex md:hidden items-center'>
@@ -69,6 +81,7 @@ const Navbar = () => {
           </div>
         </motion.div>
       )}
+      <ToastContainer/>
     </div>
   )
 }

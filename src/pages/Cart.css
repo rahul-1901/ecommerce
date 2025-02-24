@@ -1,0 +1,25 @@
+.titleDesign {
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    color: rgb(33, 38, 48);
+    font-weight: 600;
+}
+
+.clothesShown {
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.itemAddded {
+    background: transparent;
+    border: 2px solid rgba(27, 26, 26, 0.578);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sizeMap {
+    background-color: rgba(176, 175, 175, 0.16);
+}

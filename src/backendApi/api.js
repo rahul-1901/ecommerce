@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { AlertOctagon } from 'lucide-react';
 
 export const API_BASE_URL = "http://localhost:3000";
 
@@ -29,6 +30,50 @@ export const itemById = async (id) => {
     } catch (error) {
         console.error("Error getting itemBy ID...");
         throw Error;
+    }
+}
+
+export const purchaseItems = async (id) => {
+    const token = localStorage.getItem("userToken");
+    try {
+        const response = await axios.post(`${API_BASE_URL}/api/user/clothes/${id}`, {},
+            { headers: { Authorization: `Bearer ${token}` } }
+        );
+        return response.data;
+    } catch (error) {
+        console.log(error);
+        return {
+            success: false,
+            message: "Course Purchase failed...\n Something wrong on server side..."
+        };
+    }
+}
+
+export const purchasedItems = async () => {
+    const token = localStorage.getItem("userToken");
+    try {
+        const response = await axios.get(`${API_BASE_URL}/api/user/purchasedItems`, {
+            headers: {Authorization: `Bearer ${token}`}
+        });
+        console.log(response.data.purchasedDress);
+        return response.data.purchasedDress;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const deleteUserClothes = async (id) => {
+    const token = localStorage.getItem("userToken");
+    try {
+        const response = await axios.delete(`${API_BASE_URL}/api/user/deleteClothes/${id}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+        console.log(response);
+        return response.data.message;
+    } catch (error) {
+        console.log(error)
     }
 }
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { itemById } from '../backendApi/api';
+import { itemById, purchaseItems } from '../backendApi/api';
 import { useParams } from 'react-router-dom';
 import { Star, ShoppingCart, Loader2 } from 'lucide-react';
 import axios from 'axios';
 import { API_BASE_URL } from '../backendApi/api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const EachItem = () => {
     const [itemShow, setItemShow] = useState(null);
@@ -23,12 +25,31 @@ const EachItem = () => {
         }
     }
 
-    const handlePurchase = async(id) => {
+    // const handlePurchase = async(id) => {
+    //     const token = localStorage.getItem("userToken");
+    //     try {
+    //         const response = await axios.post(`${API_BASE_URL}/api/user/clothes/${id}`, {}, {
+    //             headers: {Authorization: `Bearer ${token}`}
+    //         });
+    //         console.log(response.data);
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+
+    const handlePurchase = async (id) => {
         try {
-            const response = await axios.post(`${API_BASE_URL}/api/user/clothes/${id}`);
-            console.log(response.data);
+            const response = await purchaseItems(id);
+            if (!localStorage.getItem("userToken")) {
+                throw new Error("Login to purchase items...", {cause: "Not logined"} )
+            } else if (response.success === false || !localStorage.getItem("userToken")) {
+                // return toast.error(response.message);
+                throw new Error(response.message);
+            } else {
+                toast.success(response.message, { autoClose: 1000 })
+            }
         } catch (error) {
-            console.log(error)
+            toast.error(error.message, { autoClose: 1000 });
         }
     }
 
@@ -109,8 +130,8 @@ const EachItem = () => {
                             </div>
 
                             <button
-                            onClick={() => handlePurchase(itemShow._id)}
-                            className="mt-6 md:mt-8 w-full md:w-48 bg-black text-white py-3 px-6 rounded hover:bg-gray-900 transition-colors text-sm font-medium cursor-pointer">
+                                onClick={() => handlePurchase(itemShow._id)}
+                                className="mt-6 md:mt-8 w-full md:w-48 bg-black text-white py-3 px-6 rounded hover:bg-gray-900 transition-colors text-sm font-medium cursor-pointer">
                                 ADD TO CART
                             </button>
                             <div className="mt-6 md:mt-8 space-y-2 text-sm md:text-base text-gray-600">
@@ -135,6 +156,7 @@ const EachItem = () => {
                     </div>
                 </div>
             )}
+            <ToastContainer />
         </div>
     );
 }
