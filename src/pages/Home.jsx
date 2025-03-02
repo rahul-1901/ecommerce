@@ -50,7 +50,7 @@ const Home = () => {
                             <motion.button
                                 onClick={() => {
                                     setIsShaking(true);
-                                    setTimeout(() => 
+                                    setTimeout(() =>
                                         setIsShaking(false), 1000);
                                     setTimeout(() => {
                                         navigate("/allTrend")
@@ -70,19 +70,25 @@ const Home = () => {
                         <div className='redSec animateAppear'>
                             <div className='firstBlur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
-                                <a href="/comming" className=''>Shop</a>
+                                <Link to="/comming">
+                                    <a>Shop</a>
+                                </Link>
                             </div>
                         </div>
                         <div className='secSec animateAppear'>
                             <div className='first1Blur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
-                                <a href="/comming" className=''>Shop</a>
+                                <Link to="/comming">
+                                    <a>Shop</a>
+                                </Link>
                             </div>
                         </div>
                         <div className='thirdSec animateAppear'>
                             <div className='first2Blur flex flex-col'>
                                 <p className='text-xl'>Luxury Collection</p>
-                                <a href="/comming" className=''>Shop</a>
+                                <Link to="/comming">
+                                    <a>Shop</a>
+                                </Link>
                             </div>
                         </div>
                     </div>
