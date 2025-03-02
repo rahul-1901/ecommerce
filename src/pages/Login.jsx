@@ -39,15 +39,15 @@ const Login = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("userToken");
-        if(localStorage.getItem("userToken")) {
-            console.log(localStorage.getItem("userToken"));
-        }
-        console.log(localStorage)
+        // if(localStorage.getItem("userToken")) {
+        //     console.log(localStorage.getItem("userToken"));
+        // }
+        // console.log(localStorage)
     }
 
-    const erconsole = () => {
-        console.log(localStorage);
-    }
+    // const erconsole = () => {
+    //     console.log(localStorage);
+    // }
 
     const handleChange = (e) => {
         // const name = e.target.name;
