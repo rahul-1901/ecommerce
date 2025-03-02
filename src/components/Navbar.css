@@ -29,7 +29,6 @@
 
 .smallNavbar {
     display: flex;
-    background-color: rgba(236, 217, 217, 0.825);
     right: 0;
     position: absolute;
     justify-content: center;
@@ -43,6 +42,14 @@
     gap: 20px;
     z-index: 500;
     font-weight: 700;
+}
+
+.smallContent .linkComponent {
+    text-decoration: none;
+}
+
+.smallContent .linkComponent:hover {
+    text-decoration: none;
 }
 
 .shoppingIcons {

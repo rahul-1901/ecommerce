@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { ShoppingCart, Search, User, X, Menu } from 'lucide-react';
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const handleExcess = async () => {
     if (!localStorage.getItem("userToken")) {
-      toast.error("Login first...", {autoClose: 1000})
+      toast.error("Login first...", { autoClose: 1000 })
     } else {
       navigate('/cart');
     }
@@ -33,9 +33,6 @@ const Navbar = () => {
           <Link to="/allTrend" className='routeMain'>
             Collection
           </Link>
-          {/* <Link to="/Men" className='routeMain'>
-              New
-            </Link> */}
           <Link to="/about" className='routeMain'>
             About
           </Link>
@@ -47,7 +44,7 @@ const Navbar = () => {
             <User />
           </Link>
           <button onClick={() => handleExcess()} className='cursor-pointer'>
-            <ShoppingCart /> 
+            <ShoppingCart />
           </button>
         </div>
 
@@ -58,30 +55,33 @@ const Navbar = () => {
         </div>
       </div>
 
-      {isOpen && (
-        <motion.div
-          initial={{ x: "100%" }}
-          animate={{ x: isOpen ? "0%" : "100%" }}
-          transition={{ type: "tween", duration: 0.4 }}
-          className="fixed h-full md:hidden smallNavbar w-54"
-        >
-          <div className="text-xl smallContent md:hidden">
-            <Link to="/" className="flex text-3xl mt-5" onClick={() => { setIsOpen(false) }}>
-              Home
-            </Link>
-            <Link to="/Men" className="flex text-3xl" onClick={() => { setIsOpen(false) }}>
-              Collection
-            </Link>
-            <Link to="/Men" className="flex text-3xl" onClick={() => { setIsOpen(false) }}>
-              New
-            </Link>
-            <Link to="/Men" className="flex text-3xl" onClick={() => { setIsOpen(false) }}>
-              About
-            </Link>
-          </div>
-        </motion.div>
-      )}
-      <ToastContainer/>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: "0%" }}
+            exit={{ x: "100%" }}
+            transition={{ type: "tween", duration: 0.4 }}
+            className="fixed h-full md:hidden smallNavbar w-54"
+          >
+            <div className="text-xl smallContent md:hidden">
+              <Link to="/" className="flex text-3xl mt-5 linkComponent" onClick={() => { setIsOpen(false) }}>
+                Home
+              </Link>
+              <Link to="/allTrend" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                Collection
+              </Link>
+              <Link to="/comming" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                New
+              </Link>
+              <Link to="/about" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                About
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <ToastContainer />
     </div>
   )
 }
