@@ -23,3 +23,7 @@
 .sizeMap {
     background-color: rgba(176, 175, 175, 0.16);
 }
+
+.proceedButton button {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

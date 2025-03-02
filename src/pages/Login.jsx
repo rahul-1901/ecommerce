@@ -27,6 +27,7 @@ const Login = () => {
                 }, 2000);
                 console.log(response)
                 localStorage.setItem("userToken", response.data.jwtToken);
+                localStorage.setItem("userEmail", response.data.email);
                 console.log(localStorage.getItem("userToken"))
             }
         } catch (error) {

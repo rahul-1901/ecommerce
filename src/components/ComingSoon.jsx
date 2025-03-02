@@ -55,7 +55,7 @@ const ComingSoon = () => {
                 <div className='commingSoon bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 min-h-screen flex flex-col gap-2'>
                     <h1 className='md:text-7xl text-5xl'>Comming Soon</h1>
                     <p className='md:text-xl text-sm'>We're crafting something special just for you.</p>
-                    <div className="mt-4 grid grid-cols-4 gap-4 max-w-2xl mx-auto">
+                    <div className="mt-4 grid grid-cols-4 gap-4 max-w-2xl mx-auto px-4">
                         <div className="bg-white/5 backdrop-blur-lg p-4 rounded-lg">
                             <div className="text-4xl font-bold text-white mb-1">{countTime.days}</div>
                             <div className="text-gray-400 text-sm">Days</div>

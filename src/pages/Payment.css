@@ -1,0 +1,16 @@
+.paymentJsx {
+    align-items: center;
+    justify-content: center;
+}
+
+.linkTocart {
+    text-decoration: none;
+}
+
+.linkTocart:hover {
+    text-decoration: none;
+}
+
+.payerPincode::placeholder {
+    color: black;
+} 

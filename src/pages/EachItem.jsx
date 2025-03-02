@@ -47,6 +47,7 @@ const EachItem = () => {
                 throw new Error(response.message);
             } else {
                 toast.success(response.message, { autoClose: 1000 })
+                console.log(response.purchasedClothes)
             }
         } catch (error) {
             toast.error(error.message, { autoClose: 1000 });

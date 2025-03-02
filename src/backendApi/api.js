@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { AlertOctagon } from 'lucide-react';
 
-export const API_BASE_URL = "http://localhost:3000";
+export const API_BASE_URL = "https://ecommerce-backend-three-dun.vercel.app";
 
 export const getClothes = async () => {
     try {
@@ -44,7 +43,7 @@ export const purchaseItems = async (id) => {
         console.log(error);
         return {
             success: false,
-            message: "Course Purchase failed...\n Something wrong on server side..."
+            message: "Try to relogin..."
         };
     }
 }
@@ -74,6 +73,32 @@ export const deleteUserClothes = async (id) => {
         return response.data.message;
     } catch (error) {
         console.log(error)
+    }
+}
+
+export const deliveryWork = async (deliveryData) => {
+    const token = localStorage.getItem("userToken");
+    try {
+        const response = await axios.post(`${API_BASE_URL}/api/delivery`, deliveryData, {
+            headers: {Authorization: `Bearer ${token}`}
+        });
+        console.log(response);
+        return response.data;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const finalOrderPage = async () => {
+    const token = localStorage.getItem("userToken");
+    try {
+        const response = await axios.get(`${API_BASE_URL}/api/getOrderDetails`, {
+            headers: {Authorization: `Bearer ${token}`}
+        });
+        // console.log(response);
+        return response.data.orderForm;
+    } catch (error) {
+        console.log(error);
     }
 }
 

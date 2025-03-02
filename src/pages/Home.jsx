@@ -111,13 +111,13 @@ const Home = () => {
                         <div className='leftSide flex flex-col md:p-10 md:w-[52%]'>
                             <p className='new1 text-4xl animateAppear'>New Season Arrival</p>
                             <p className='new2 text-2xl mt-3 animateAppear'>Get ready for the changing season with our latest collection. Up to 40% off on selected items.</p>
-                            <Link to="/comming" className='w-[170px]' onClick={(e) => e.preventDefault()}>
+                            <Link className='w-[170px]' onClick={(e) => e.preventDefault()}>
                                 <motion.button
                                     onClick={() => {
                                         setIsShaking(true);
                                         setTimeout(() => {
                                             setIsShaking(false);
-                                            window.location.href = "/Men";
+                                            window.location.href = "/comming";
                                         }, 700);
                                     }}
                                     animate={isShaking ? { x: [-5, 5, -5, 5, 0] } : {}}
