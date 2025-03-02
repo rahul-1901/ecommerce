@@ -33,7 +33,7 @@ const SignUp = () => {
         } catch (error) {
             const response1 = error;
             toast.error(response1.response.data.message)
-            console.log(error)
+            // console.log(error)
         }
     }
 

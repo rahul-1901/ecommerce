@@ -25,13 +25,13 @@ const Login = () => {
                 setTimeout(() => {
                     navigate("/")
                 }, 2000);
-                console.log(response)
+                // console.log(response)
                 localStorage.setItem("userToken", response.data.jwtToken);
                 localStorage.setItem("userEmail", response.data.email);
-                console.log(localStorage.getItem("userToken"))
+                // console.log(localStorage.getItem("userToken"))
             }
         } catch (error) {
-            console.log(error)
+            // console.log(error)
             const response1 = error
             toast.error(response1.response.data.message, { autoClose: 1000 })
         }
@@ -129,15 +129,15 @@ const Login = () => {
                             Sign in
                         </button>
                     </form>
-                    <button
+                    {/* <button
                             onClick={erconsole}
                             className="w-full py-3 px-4 rounded-lg text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral-500 transition-colors cursor-pointer">
                             Sign in
-                        </button>
+                        </button> */}
                         <button
                             onClick={handleLogout}
                             className="w-full py-3 px-4 rounded-lg text-white bg-red-700 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-coral-500 transition-colors cursor-pointer">
-                            Sign in
+                            LogOut
                         </button>
                 </div>
             </div>
