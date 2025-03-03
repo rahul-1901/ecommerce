@@ -18,6 +18,7 @@ import Cart from "../src/pages/Cart";
 import Payment from "../src/pages/Payment";
 import FinalPayment from "../src/pages/FinalPayment";
 import OrderPlaced from '../src/pages/OrderPlaced';
+import DashBoard from '../src/pages/DashBoard';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/paymentDetails" element={<Payment />} caseSensitive></Route>
           <Route path="/finalPayment" element={<FinalPayment />} caseSensitive></Route>
           <Route path="/orderPlaced" element={<OrderPlaced />} caseSensitive></Route>
+          <Route path="/dashBoard" element={<DashBoard/>} caseSensitive></Route>
         </Routes>
         <HideNavbar>
           <Footer />

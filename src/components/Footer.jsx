@@ -12,6 +12,8 @@ import {
     ShieldCheck,
     ArrowRight
 } from 'lucide-react';
+import "./Navbar.css";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -20,7 +22,6 @@ const Footer = () => {
             <footer className="bg-gray-900 text-gray-300">
                 <div className="container mx-auto px-4 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* About Section */}
                         <div className='lg:ml-10'>
                             <h4 className="text-xl font-bold text-white mb-4">PreMart</h4>
                             <p className="mb-4 text-sm leading-relaxed">
@@ -43,40 +44,36 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        {/* Quick Links */}
                         <div>
                             <h4 className="text-xl font-bold text-white mb-4">Quick Links</h4>
-                            <ul className="space-y-2">
-                                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Shop Now</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Track Order</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                                <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
+                            <ul className="space-y-2 linksAll">
+                                <li><Link to="/" className="lim hover:text-white transition-colors">Home</Link></li>
+                                <li><Link to="/login" className="lim hover:text-white transition-colors">Login</Link></li>
+                                <li><Link to="/allTrend" className="lim hover:text-white transition-colors">Collection</Link></li>
+                                <li><Link to="/about" className="lim hover:text-white transition-colors">About Us</Link></li>
                             </ul>
                         </div>
 
-                        {/* Contact Info */}
                         <div>
                             <h4 className="text-xl font-bold text-white mb-4">Contact Us</h4>
                             <ul className="space-y-4">
                                 <li className="flex items-center gap-3">
                                     <MapPin size={20} />
-                                    <span>123 Commerce St, Shopping City, SC 12345</span>
+                                    <span><a href="https://www.google.com/maps/search/iit+jodhpur/@26.4750698,73.1156574,331m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D" target="_blank" className='callNumber'>O3 Hostel, ROHIDA, IIT JODHPUR</a></span>
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <Phone size={20} />
-                                    <span>+1 (555) 123-4567</span>
+                                    <span><a href="tel:+917852021098" className='callNumber'>+91 7852021098</a></span>
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <Mail size={20} />
-                                    <span>support@premart.com</span>
+                                    <span><a href="mailto: iitdelhi98@gmail.com" className='callNumber'>iitdelhi98@gmail.com</a></span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
                 <div className="border-t border-gray-800">
                     <div className="container mx-auto px-4 py-6">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-4">

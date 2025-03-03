@@ -99,7 +99,7 @@ const Home = () => {
                             <div className='spanLine ml-2'></div>
                         </div>
                         <div className='clothesCollection flex-wrap px-10'>
-                            {clothes.slice(0, 12).map((dress) => (
+                            {clothes.slice(0, 8).map((dress) => (
                                 <div className='dress mt-7 animateAppear' key={dress._id}>
                                     <Link to={`/item/${dress._id}`}>
                                         <div className='cloth'>

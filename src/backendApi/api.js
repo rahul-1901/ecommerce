@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_BASE_URL = "https://ecommerce-backend-three-dun.vercel.app";
+export const API_BASE_URL = "http://localhost:3000";
 
 export const getClothes = async () => {
     try {
@@ -97,6 +97,19 @@ export const finalOrderPage = async () => {
         });
         // console.log(response);
         return response.data.orderForm;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export const dashBoardDetails = async () => {
+    const token = localStorage.getItem("userToken");
+    try {
+        const response = await axios.get(`${API_BASE_URL}/api/user/userInfo`, {
+            headers: {Authorization: `Bearer ${token}`}
+        })
+        console.log(response);
+        return response.data.user;
     } catch (error) {
         console.log(error);
     }

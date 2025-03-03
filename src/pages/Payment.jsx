@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./Payment.css";
 import { Link, useNavigate } from "react-router-dom"
 import { ChevronLeft } from "lucide-react";
-import { deliveryWork } from '../backendApi/api';
+import { deliveryWork, finalOrderPage } from '../backendApi/api';
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -14,16 +14,16 @@ const Payment = () => {
         e.preventDefault();
         try {
             const response = await deliveryWork(deliveryData);
-            if(response.message === 'Info already there...') {
-                toast.warn(response.message, {autoClose: 1000})
+            if (response.message === 'Info already there...') {
+                toast.warn(response.message, { autoClose: 1000 })
             } else {
-                toast.success(response.message, {autoClose: 1000})
+                toast.success(response.message, { autoClose: 1000 })
             }
             setTimeout(() => {
                 navigate('/finalPayment');
             }, 2000)
         } catch (error) {
-            console.log("error here page")
+            toast.error("Error submitting delivery details.");
         }
     }
 
@@ -34,11 +34,29 @@ const Payment = () => {
     }
 
     useEffect(() => {
-        const storedEmail = localStorage.getItem("userEmail");
-        if (storedEmail) {
-            setDeliveryData((prev) => ({ ...prev, email: storedEmail }));
-        }
-    }, [])
+        const fetchDeliveryDetails = async () => {
+            const storedEmail = localStorage.getItem("userEmail");
+            if (storedEmail) {
+                setDeliveryData((prev) => ({ ...prev, email: storedEmail }));
+                try {
+                    const data = await finalOrderPage();
+                    console.log(data)
+                    if (data.email === storedEmail) {
+                        setDeliveryData((prev) => ({
+                            ...prev,
+                            ...data,
+                        }));
+                    } else {
+                        console.warn("No delivery details found");
+                    }
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+        };
+
+        fetchDeliveryDetails();
+    }, []);
 
     return (
         <>
@@ -53,7 +71,8 @@ const Payment = () => {
                             name='firstName'
                             placeholder='First Name'
                             className='border border-gray-300 rounded py-2 px-1 w-full'
-                            onChange={(e) => setDeliveryData({ ...deliveryData, firstName: e.target.value })}
+                            value={deliveryData.firstName}
+                            onChange={handleChange}
                         ></input>
                         <input
                             type='text'
@@ -141,7 +160,6 @@ const Payment = () => {
                         <option value='oCountry'>Manipur</option>
                         <option value='pCountry'>Meghalaya</option>
                         <option value='qCountry'>Mizoram</option>
-                        <option value='rCountry'>Mizoram</option>
                         <option value='sCountry'>Nagaland</option>
                         <option value='tCountry'>Odisha</option>
                         <option value='uCountry'>Punjab</option>
@@ -180,7 +198,7 @@ const Payment = () => {
                         PROCEED PAYMENT
                     </button>
                 </form>
-                <ToastContainer/>
+                <ToastContainer />
             </div>
         </>
     )

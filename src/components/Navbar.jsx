@@ -9,11 +9,19 @@ import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const handleExcess = async () => {
+  const handleExcess = () => {
     if (!localStorage.getItem("userToken")) {
       toast.error("Login first...", { autoClose: 1000 })
     } else {
       navigate('/cart');
+    }
+  }
+
+  const handleDashLogin = () => {
+    if (localStorage.getItem("userToken")) {
+      navigate('/dashBoard')
+    } else {
+      navigate('login')
     }
   }
   return (
@@ -40,9 +48,9 @@ const Navbar = () => {
 
         <div className='shoppingIcons md:flex items-center text-xl hidden'>
           <Search />
-          <Link to="/login">
+          <button onClick={() => handleDashLogin()} className='cursor-pointer'>
             <User />
-          </Link>
+          </button>
           <button onClick={() => handleExcess()} className='cursor-pointer'>
             <ShoppingCart />
           </button>

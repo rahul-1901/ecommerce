@@ -28,16 +28,21 @@ const Cart = () => {
             setShowPurchased(false);
         }
     }, [purchased])
+
     console.log(purchased)
-    // const handlePurchase = async (id) => {
-    //     try {
-    //         const response = await purchaseItems(id);
-    //         setCountPurchased(response.purchasedClothes)
-    //         console.log(response.purchasedClothes)
-    //     } catch (error) {
-    //         console.log("Error")
-    //     }
-    // }
+
+    const handlePurchase = async (id) => {
+        try {
+            const response = await purchaseItems(id);
+            if(response.success === false) {
+                throw new Error(response.message)
+            } else {
+                toast.success("Item purchased", {autoClose: 1000})
+            }
+        } catch (error) {
+            toast.error(error.message, {autoClose: 1000})
+        }
+    }
 
     const handleDelete = async (id) => {
         try {
@@ -82,7 +87,7 @@ const Cart = () => {
                                         </div>
                                     </div>
                                     <div className='flex flex-col md:flex-row md:justify-center items-center md:items-start mt-2 ml-2 md:mt-4 md:ml-10 lg:ml-60 trashHere text-xl'>
-                                        <div className='itemAddded w-20 mr-1 md:mr-0'>33</div>
+                                        {/* <div className='itemAddded w-20 mr-1 md:mr-0'>33</div> */}
                                         <button onClick={() => handleDelete(items._id)}>
                                             <Trash size={25} className='md:ml-20 mt-2 md:mt-[2px] cursor-pointer md:mr-20' />
                                         </button>

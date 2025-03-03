@@ -55,3 +55,19 @@
 .shoppingIcons {
     gap: 15px;
 }
+
+.linksAll .lim{
+    text-decoration: none;
+}
+
+.linksAll .lim:hover {
+    text-decoration: none;
+}
+
+.callNumber {
+    text-decoration: none;
+}
+
+.callNumber:hover {
+    text-decoration: none;
+}
