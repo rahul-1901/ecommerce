@@ -70,20 +70,31 @@ const Navbar = () => {
             animate={{ x: "0%" }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.4 }}
-            className="fixed h-full md:hidden smallNavbar w-54"
+            className="fixed h-[100vh] md:hidden smallNavbar w-54 bg-gray-100"
           >
             <div className="text-xl smallContent md:hidden">
               <Link to="/" className="flex text-3xl mt-5 linkComponent" onClick={() => { setIsOpen(false) }}>
                 Home
               </Link>
+              <div className='w-54 h-[1px] bg-black'></div>
               <Link to="/allTrend" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
                 Collection
               </Link>
+              <div className='w-54 h-[1px] bg-black'></div>
               <Link to="/comming" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
                 New
               </Link>
+              <div className='w-54 h-[1px] bg-black'></div>
               <Link to="/about" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
                 About
+              </Link>
+              <div className='w-54 h-[1px] bg-black'></div>
+              <Link to="/cart" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                Cart
+              </Link>
+              <div className='w-54 h-[1px] bg-black'></div>
+              <Link to="/login" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                User
               </Link>
             </div>
           </motion.div>

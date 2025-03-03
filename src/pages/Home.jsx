@@ -43,7 +43,7 @@ const Home = () => {
         <>
             {showitems ? (
                 <div>
-                    <div className='startPart flex md:bg-[69%_25%] bg-center mt-[70px]'>
+                    <div className='startPart flex md:bg-[69%_25%] bg-center mt-[70px] h-[100vh]'>
                         <div className='attention text-white z-200 flex flex-col items-center md:mt-10'>
                             <h1 className='md:text-5xl text-4xl'>Summer Collection</h1>
                             <p className='md:text-2xl text-xl'>Discover the latest trends</p>

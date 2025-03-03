@@ -81,9 +81,9 @@ const Footer = () => {
                                 © 2024 PreMart. All rights reserved.
                             </p>
                             <div className="flex gap-6 text-sm">
-                                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                                <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+                                <a className="hover:text-white transition-colors cursor-pointer">Privacy Policy</a>
+                                <a className="hover:text-white transition-colors cursor-pointer">Terms of Service</a>
+                                <a className="hover:text-white transition-colors cursor-pointer">Cookie Policy</a>
                             </div>
                         </div>
                     </div>

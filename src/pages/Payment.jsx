@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Payment = () => {
     const [deliveryData, setDeliveryData] = useState({ firstName: "", lastName: "", pinCode: "", phoneNumber: "", State: "", Country: "", houseAddress: "", nearAddress: "", city: "", email: "" })
     const navigate = useNavigate();
+    const [readOnly, setReadOnly] = useState(false);
 
     const handleDelivery = async (e) => {
         e.preventDefault();
@@ -46,6 +47,7 @@ const Payment = () => {
                             ...prev,
                             ...data,
                         }));
+                        setReadOnly(true);
                     } else {
                         console.warn("No delivery details found");
                     }
@@ -70,9 +72,10 @@ const Payment = () => {
                             required
                             name='firstName'
                             placeholder='First Name'
-                            className='border border-gray-300 rounded py-2 px-1 w-full'
+                            className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}
                             value={deliveryData.firstName}
                             onChange={handleChange}
+                            readOnly={readOnly}
                         ></input>
                         <input
                             type='text'
@@ -81,7 +84,8 @@ const Payment = () => {
                             value={deliveryData.lastName}
                             onChange={handleChange}
                             placeholder='Last Name'
-                            className='border border-gray-300 rounded py-2 px-1 w-full'
+                            readOnly={readOnly}
+                            className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}
                         ></input>
                     </div>
                     <input
@@ -101,8 +105,9 @@ const Payment = () => {
                         name='houseAddress'
                         value={deliveryData.houseAddress}
                         onChange={handleChange}
+                        readOnly={readOnly}
                         placeholder='House Address'
-                        className='border border-gray-300 py-2 px-1 rounded w-full'
+                        className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}
                     >
                     </input>
                     <input
@@ -110,8 +115,9 @@ const Payment = () => {
                         name='nearAddress'
                         value={deliveryData.nearAddress}
                         onChange={handleChange}
+                        readOnly={readOnly}
                         placeholder='Near LandMark *(Optional)'
-                        className='border border-gray-300 py-2 px-1 rounded w-full'
+                        className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}
                     >
                     </input>
                     <div className='payUserInput flex gap-3'>
@@ -121,8 +127,9 @@ const Payment = () => {
                             placeholder='City'
                             name='city'
                             value={deliveryData.city}
+                            readOnly={readOnly}
                             onChange={handleChange}
-                            className='border border-gray-300 rounded py-2 px-1 w-full'
+                            className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}
                         >
                         </input>
                         <input
@@ -130,10 +137,11 @@ const Payment = () => {
                             name='phoneNumber'
                             value={deliveryData.phoneNumber}
                             onChange={handleChange}
+                            readOnly={readOnly}
                             placeholder='+91 Phone Number'
                             pattern="[0-9]{10}"
                             maxLength="10"
-                            className='border border-gray-300 rounded py-2 px-1'
+                            className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}
                         >
                         </input>
                     </div>
@@ -141,7 +149,8 @@ const Payment = () => {
                         name='State'
                         value={deliveryData.State}
                         onChange={handleChange}
-                        className='border border-gray-900 rounded py-2 w-full'>
+                        readOnly={readOnly}
+                        className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}>
                         <option value='country'>State</option>
                         <option value='aCountry'>Andhra Pradesh</option>
                         <option value='bCountry'>Arunachal Pradesh</option>
@@ -180,15 +189,17 @@ const Payment = () => {
                             name='pinCode'
                             value={deliveryData.pinCode}
                             onChange={handleChange}
+                            readOnly={readOnly}
                             maxLength="6"
-                            className='payerPincode border border-gray-900 rounded py-2 px-1 w-full'
+                            className={`payerPincode border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}
                         >
                         </input>
                         <select
                             name='Country'
                             value={deliveryData.Country}
                             onChange={handleChange}
-                            className='border border-gray-900 rounded py-2 px-1 w-full'>
+                            readOnly={readOnly}
+                            className={`border border-gray-300 rounded py-2 px-1 w-full ${readOnly ? "bg-blue-100" : "bg-transparent"}`}>
                             <option value='country'>Country</option>
                             <option value='firstCountry'>India</option>
                         </select>
