@@ -87,11 +87,11 @@ const Home = () => {
                                 </div>
                             </div>
                         </Link>
-                        <Link to="/comming">
+                        <Link to="/watches">
                             <div className='thirdSec animateAppear'>
                                 <div className='first2Blur flex flex-col'>
                                     {/* <p className='text-xl'>Luxury Collection</p> */}
-                                    <Link to="/comming">
+                                    <Link to="/watches">
                                         <a className='text-xl'>Shop</a>
                                     </Link>
                                 </div>

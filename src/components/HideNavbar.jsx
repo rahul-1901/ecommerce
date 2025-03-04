@@ -5,7 +5,7 @@ const ShowNavbar = ({ children }) => {
     const location = useLocation();
     const [showNavbar, setShowNavbar] = useState(true);
 
-    const navVisible = ["/", "/Men", "/item/:id", "/allTrend", "/about", "/login", "/signUp", "/cart", "/paymentDetails", "/finalPayment", "/orderPlaced", "/dashBoard"];
+    const navVisible = ["/", "/Men", "/item/:id", "/allTrend", "/about", "/login", "/signUp", "/cart", "/paymentDetails", "/finalPayment", "/orderPlaced", "/dashBoard", "/watches"];
 
     useEffect(() => {
         // console.log(location);
