@@ -67,30 +67,36 @@ const Home = () => {
                     </div>
 
                     <div className='diffSection flex flex-wrap mt-24 gap-12'>
-                        <div className='redSec animateAppear'>
-                            <div className='firstBlur flex flex-col'>
-                                <p className='text-xl'>Luxury Collection</p>
-                                <Link to="/comming">
-                                    <a>Shop</a>
-                                </Link>
+                        <Link to="/comming">
+                            <div className='redSec animateAppear'>
+                                <div className='firstBlur flex flex-col'>
+                                    {/* <p className='text-xl'>Luxury Collection</p> */}
+                                    <Link to="/comming">
+                                        <p className='text-xl'>Shop</p>
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                        <div className='secSec animateAppear'>
-                            <div className='first1Blur flex flex-col'>
-                                <p className='text-xl'>Luxury Collection</p>
-                                <Link to="/comming">
-                                    <a>Shop</a>
-                                </Link>
+                        </Link>
+                        <Link to="/comming">
+                            <div className='secSec animateAppear'>
+                                <div className='first1Blur flex flex-col'>
+                                    {/* <p className='text-xl'>Luxury Collection</p> */}
+                                    <Link to="/comming">
+                                        <a className='text-xl underLine'>Shop</a>
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
-                        <div className='thirdSec animateAppear'>
-                            <div className='first2Blur flex flex-col'>
-                                <p className='text-xl'>Luxury Collection</p>
-                                <Link to="/comming">
-                                    <a>Shop</a>
-                                </Link>
+                        </Link>
+                        <Link to="/comming">
+                            <div className='thirdSec animateAppear'>
+                                <div className='first2Blur flex flex-col'>
+                                    {/* <p className='text-xl'>Luxury Collection</p> */}
+                                    <Link to="/comming">
+                                        <a className='text-xl'>Shop</a>
+                                    </Link>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
 
                     <div className=''>

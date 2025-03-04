@@ -12,13 +12,13 @@ const DashBoard = () => {
         {
             id: "ORD-2025-4872",
             date: "25-2-2025",
-            status: "Delivered",
+            status: "Processing",
             total: "$1.00"
         },
         {
             id: "ORD-2025-3651",
             date: "26-2-2025",
-            status: "Processing",
+            status: "Delivered",
             total: "$2.00"
         },
         {

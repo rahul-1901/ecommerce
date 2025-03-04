@@ -109,9 +109,11 @@ const OrderPlaced = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                                <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors flex-1">
-                                    Track Order
-                                </button>
+                                <a className='flex-1' href='https://www.google.com/maps/search/iit+jodhpur/@26.4750698,73.1156574,331m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D' target='_blank'>
+                                    <button className="bg-blue-600 hover:bg-blue-700 text-white w-full font-medium py-2 px-6 rounded-lg cursor-pointer">
+                                        Track Order
+                                    </button>
+                                </a>
                                 <Link to="/finalPayment" className='flex-1'>
                                     <button className="text-white font-medium py-2 px-6 rounded-lg bg-[oklch(0.373_0.034_259.733)] hover:bg-[oklch(0.373_0.054_259.733)] w-full cursor-pointer">
                                         View Order Details

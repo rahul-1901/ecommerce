@@ -66,18 +66,14 @@
     transition: right 0.5s ease;
 }
 
-.firstBlur p{
-    font-weight: 600;
-}
-
 .firstBlur a{
     font-weight: 500;
     transition: text-decoration 0.5s ease;
     width: 50px;
 }
 
-a:hover {
-    text-decoration: underline;
+.firstBlur a:hover {
+    text-decoration: iun;
 }
 
 .redSec:hover .firstBlur{
@@ -103,26 +99,12 @@ a:hover {
     right: 0;
     justify-content: flex-end;
     padding: 10px;
-    background-color: rgba(141, 141, 158, 0.373);
+    background-color: rgba(102, 102, 119, 0.585);
     transition: top 0.5s ease;
 }
 
 .secSec:hover .first1Blur {
     top: 0;
-}
-
-.first1Blur p{
-    font-weight: 600;
-}
-
-.first1Blur a{
-    font-weight: 500;
-    transition: text-decoration 0.5s ease;
-    width: 50px;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .thirdSec{
@@ -158,11 +140,12 @@ a:hover {
     color: rgb(255, 254, 254);
 }
 
-.first1Blur a{
-    font-weight: 500;
-    transition: text-decoration 0.5s ease;
-    width: 50px;
-    color: whitesmoke;
+.underLine {
+    color: white;
+}
+
+.underLine:hover {
+    text-decoration: underline white;
 }
 
 .first2Blur p{
@@ -172,13 +155,12 @@ a:hover {
 
 .first2Blur a{
     font-weight: 500;
-    transition: text-decoration 0.5s ease;
     width: 50px;
     color: rgb(132, 63, 23);
 }
 
-a:hover {
-    text-decoration: underline;
+.first2Blur a:hover {
+    text-decoration: underline rgb(132, 63, 23);
 }
 
 .spanLine {

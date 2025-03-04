@@ -94,7 +94,11 @@ const Navbar = () => {
               </Link>
               <div className='w-54 h-[1px] bg-black'></div>
               <Link to="/login" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
-                User
+                Login
+              </Link>
+              <div className='w-54 h-[1px] bg-black'></div>
+              <Link to="/dashBoard" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                DashBoard
               </Link>
             </div>
           </motion.div>
