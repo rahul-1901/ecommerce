@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { ShoppingCart, Search, User, X, Menu } from 'lucide-react';
+import { ShoppingCart, Search, User, X, Menu, LogOut } from 'lucide-react';
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
 import { ToastContainer, toast } from 'react-toastify';
@@ -24,6 +24,20 @@ const Navbar = () => {
       navigate('login')
     }
   }
+
+  const handleLogout = () => {
+    localStorage.removeItem("userToken");
+    localStorage.removeItem("userEmail");
+    toast.success("Logout successfull...", { autoClose: 1000 })
+    setTimeout(() => {
+      navigate('/login');
+    }, 2000)
+    // if(localStorage.getItem("userToken")) {
+    //     console.log(localStorage.getItem("userToken"));
+    // }
+    // console.log(localStorage)
+  }
+
   return (
     <div className='navbarBody w-full top-0 left-0 fixed z-9999'>
       <div className='navbarContent mx-auto shadow-md p-5 bg-white'>
@@ -38,6 +52,9 @@ const Navbar = () => {
           <Link to="/" className='routeMain'>
             Home
           </Link>
+          <Link to="/watches" className='routeMain'>
+            Accessories
+          </Link>
           <Link to="/allTrend" className='routeMain'>
             Collection
           </Link>
@@ -47,12 +64,14 @@ const Navbar = () => {
         </div>
 
         <div className='shoppingIcons md:flex items-center text-xl hidden'>
-          <Search />
           <button onClick={() => handleDashLogin()} className='cursor-pointer'>
             <User />
           </button>
           <button onClick={() => handleExcess()} className='cursor-pointer'>
             <ShoppingCart />
+          </button>
+          <button onClick={() => handleLogout()} className='cursor-pointer'>
+            <LogOut />
           </button>
         </div>
 

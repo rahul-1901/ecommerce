@@ -27,7 +27,7 @@ const Cart = () => {
     }
 
     useEffect(() => {
-        if (purchased.length >= 1) {
+        if (Array.isArray(purchased) && purchased.length > 0) {
             setShowPurchased(true);
         } else {
             setShowPurchased(false);
@@ -52,7 +52,7 @@ const Cart = () => {
     const handleDelete = async (id) => {
         try {
             const response = await deleteUserClothes(id);
-            toast.success(response, { autoClose: 1000 });
+            toast.success(response, { autoClose: 500 });
             const updatedUserClothes = await purchasedItems();
             setTimeout(() => {
                 setPurchased(updatedUserClothes);

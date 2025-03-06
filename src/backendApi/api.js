@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export const API_BASE_URL = "https://ecommerce-backend-three-dun.vercel.app";
+export const API_BASE_URL = "http://localhost:3000";
+// https://ecommerce-backend-three-dun.vercel.app
 
 export const getClothes = async () => {
     try {
@@ -115,6 +116,16 @@ export const dashBoardDetails = async () => {
     }
 }
 
+// export const getWatches = async () => {
+//     try {
+//         const response = await axios.get(`${API_BASE_URL}/api/watches`);
+//         console.log(response);
+//         return response.data.allWatches
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+ 
 // export const userSignUp = async (userData) => {
 //     try {
 //         const response = await axios.post(`${API_BASE_URL}/api/user/signUp`, userData);

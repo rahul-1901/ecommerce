@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@font-face {
+    font-family: 'Zaptron';
+    src: url("../assets/Zaptron-Regular.otf") format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+.textClass {
+    font-family: 'Zaptron';
+}
+
+.imageWatches {
+    transition: transform 0.7s ease-in-out;
+}
+
+.imageWatches:hover {
+    transform: scale(1.1);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+.card {
+    position: relative;
+}
+
+.cardImg {
+    border-radius: 1.25rem;
+    border: 0.5rem solid var(--border-color);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.7s ease-in-out;
+}
+
+.cardImg:hover {
+    transform: scale(1.1);
+}
+
+.cardInfo {
+    width: 12.5rem;
+    height: 4.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: white;
+    border-top: 0.5rem solid var(--border-color);
+    border-left: 0.5rem solid var(--border-color);
+    border-radius: 1rem 0 0 0;
+}
+
+.apnCard {
+    margin-top:-30px;
+}
+
+.cardInfo::after, .cardInfo::before {
+    width: 1.125rem;
+    height: 1.125rem;
+    content: "";
+    position: absolute;
+}
+
+.cardInfo::after{
+    top: -1.125rem;
+    right: 0;
+    border-bottom-right-radius: 0.8rem;
+    box-shadow: 0.375rem 0.375rem white;
+}
+
+.cardInfo::before {
+    background: transparent;
+    right: 0.5rem;
+    top: -1.75rem;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: 0.375rem 0.375rem transparent;
+}
+
+.curve_one, .curve_two {
+    width: 1.25rem;
+    height: 1.25rem;
+    content: "";
+    position: absolute;
+}
+
+.curve_one {
+    background: transparent;
+    left: 45%;
+    bottom: 0.0rem;
+    border-bottom-right-radius: 0.5rem;
+    box-shadow: 0.375rem 0.375rem white;
+}
+
+.curve_two {
+    background: transparent;
+    left: 45%;
+    bottom: 2.1rem;
+    border-bottom-right-radius: 0.8rem;
+    box-shadow: 0.375rem 0.375rem white;
+}
+
+.cardInfo1 {
+    width: 12.5rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+    border-top: 0.5rem solid var(--border-color);
+    border-left: 0.5rem solid var(--border-color);
+    border-radius: 0 0 1rem 0;
+    padding: 0.3rem;
+}
+
+.cardInfo1::after,
+.cardInfo1::before {
+    width: 1.125rem;
+    height: 1.125rem;
+    content: "";
+    position: absolute;
+}
+
+.cardInfo1::after {
+    background-color: transparent;
+    top: 0;
+    right: -1.125rem;
+    border-top-left-radius: 0.8rem;
+    box-shadow: -0.375rem -0.375rem white;
+}
+
+.cardInfo1::before {
+    background-color: transparent;
+    left: 0;
+    top: 2.75rem;
+    border-top-left-radius: 0.8rem;
+    box-shadow: -0.375rem -0.375rem white;
+}
