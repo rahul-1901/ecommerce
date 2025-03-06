@@ -100,8 +100,8 @@ const Navbar = () => {
                 Collection
               </Link>
               <div className='w-54 h-[1px] bg-black'></div>
-              <Link to="/comming" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
-                New
+              <Link to="/watches" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                Accessories
               </Link>
               <div className='w-54 h-[1px] bg-black'></div>
               <Link to="/about" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
