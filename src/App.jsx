@@ -20,6 +20,7 @@ import FinalPayment from "../src/pages/FinalPayment";
 import OrderPlaced from '../src/pages/OrderPlaced';
 import DashBoard from '../src/pages/DashBoard';
 import Watches from '../src/pages/Watches';
+import Design from '../src/pages/Design';
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="/orderPlaced" element={<OrderPlaced />} caseSensitive></Route>
           <Route path="/dashBoard" element={<DashBoard/>} caseSensitive></Route>
           <Route path="/watches" element={<Watches/>} caseSensitive></Route>
+          <Route path="/luxury" element={<Design/>} caseSensitive></Route>
         </Routes>
         <HideNavbar>
           <Footer />

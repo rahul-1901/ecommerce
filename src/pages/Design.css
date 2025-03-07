@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Sebestian';
+    src: url('../assets/SebastianRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.luxText {
+    font-family: 'Sebestian';
+}
+
+.sliderTitle p{
+    font-family: 'Sebestian';
+}
+
+.brandSlider {
+    height: 100px;
+    width: full;
+    display: flex;
+    overflow: hidden;
+    place-items: center;
+}
+
+.slider {
+    width: calc(250px*18);
+    gap: 50px;
+    animation: slider 40s linear infinite;
+}
+
+.sliderImage {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(0);
+    } 100% {
+        transform: translateX(calc(-700px*2));
+    }
+}
+
+.luxuryItem {
+    transition: transform 0.5s ease;
+}
+
+.luxuryItem:hover {
+    transform: scale(1.1);
+}
+
+.expanded {
+    height: 400px;
+    border-radius: 50px;
+    transition: width 0.5s ease;
+}
+
+.tradition {
+    font-family: 'Sebestian';
+}

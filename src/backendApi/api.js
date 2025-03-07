@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_BASE_URL = "https://ecommerce-backend-three-dun.vercel.app";
+export const API_BASE_URL = "http://localhost:3000";
 // https://ecommerce-backend-three-dun.vercel.app
 
 export const getClothes = async () => {

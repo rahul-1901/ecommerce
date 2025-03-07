@@ -247,7 +247,7 @@ const Watches = () => {
         <div>
             {showWatches ? (
                 <div >
-                    <div className="relative h-[100vh]">
+                    <div className="relative h-[100vh] mt-[70px]">
                         <div className="absolute inset-0">
                             <video
                                 className="w-full h-full object-cover"
@@ -260,7 +260,7 @@ const Watches = () => {
                             <div className="absolute inset-0 bg-gray-900 opacity-50"></div>
                         </div>
                         <div className="relative flex justify-center items-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="textClass flex flex-col text-center mt-20">
+                            <div className="textClass flex flex-col text-center mt-0 md:mt-10">
                                 <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
                                     Our Watch Collection
                                 </h1>
@@ -269,7 +269,6 @@ const Watches = () => {
                                 </p>
                             </div>
                         </div>
-
                     </div>
                     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 mb-2 animateAppear">Premium Collection</h2>
