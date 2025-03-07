@@ -15,16 +15,18 @@
 
 .brandSlider {
     height: 100px;
+    margin: auto;
+    position: relative;
     width: full;
-    display: flex;
+    display: grid;
     overflow: hidden;
     place-items: center;
 }
 
 .slider {
-    width: calc(250px*18);
-    gap: 50px;
-    animation: slider 40s linear infinite;
+    width: calc(100px*12);
+    gap: 100px;
+    animation: scroll 10s linear infinite;
 }
 
 .sliderImage {
@@ -35,11 +37,11 @@
     padding: 10px;
 }
 
-@keyframes slider {
+@keyframes scroll {
     0% {
         transform: translateX(0);
     } 100% {
-        transform: translateX(calc(-700px*2));
+        transform: translateX(-100%);
     }
 }
 

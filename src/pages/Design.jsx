@@ -29,10 +29,10 @@ const Design = () => {
                     </div>
                     <div className="relative flex justify-center items-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="luxText flex flex-col text-center mt-0 md:mt-10">
-                            <p className="text-5xl md:text-7xl lg:text-8xl text-white">
+                            <p className="text-5xl md:text-7xl font-semibold lg:text-8xl text-white">
                                 Luxury Collection
                             </p>
-                            <p className="mt-6 text-xl md:text-3xl lg:text-4xl text-white max-w-3xl mx-auto">
+                            <p className="mt-2 md:mt-6 text-xl md:text-3xl lg:text-4xl text-white max-w-3xl mx-auto">
                                 Where Fashion Meets Comfort
                             </p>
                         </div>
@@ -47,93 +47,72 @@ const Design = () => {
                 <div className='brandSlider'>
                     <div className='slider flex'>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>UrbanVogue</p>
+                        </div>
+                        <div className='sliderImage'>
+                            <p>HypeWear</p>
+                        </div>
+                        <div className='sliderImage'>
+                            <p>ModeX</p>
                         </div>
                         <div className='sliderImage'>
                             <p>GUCCI</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Velaré</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                    </div>
-
-                    <div className='slider flex'>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Élan</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Verde</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Levis</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Prada</p>
                         </div>
 
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>UrbanVogue</p>
+                        </div>
+                        <div className='sliderImage'>
+                            <p>HypeWear</p>
+                        </div>
+                        <div className='sliderImage'>
+                            <p>ModeX</p>
                         </div>
                         <div className='sliderImage'>
                             <p>GUCCI</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Velaré</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Élan</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Verde</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Levis</p>
                         </div>
                         <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
-                        </div>
-                        <div className='sliderImage'>
-                            <p>GUCCI</p>
+                            <p>Prada</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="text-center mt-10 sliderTitle">
-                    <p className="mt-1 text-5xl text-gray-900 mb-10">
+                    <p className="mt-1 text-5xl text-gray-900 md:mb-10">
                         Luxury Suits
                     </p>
                 </div>
-                <div className='luxurySection flex flex-col gap-10 mb-10'>
-                    <div className='flex justify-center items-center gap-10'>
+                <div className='luxurySection flex flex-col gap-1 md:gap-10 mb-20 md:mb-10'>
+                    <div className='flex justify-center items-center gap-4 md:gap-10 p-4 lg:p-0'>
                         <div className='overflow-hidden rounded-md'>
-                            <div className='luxuryItem w-89 h-130 cursor-pointer'>
+                            <div className='luxuryItem h-80 md:h-120 lg:w-89 lg:h-130 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-md object-cover object-center'
                                     src="https://images.unsplash.com/photo-1673610178158-1c4c5b7e4d98?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDR8fHN1aXRzJTIwd29tZW58ZW58MHx8MHx8fDA%3D"
@@ -141,7 +120,7 @@ const Design = () => {
                             </div>
                         </div>
                         <div className='overflow-hidden rounded-md'>
-                            <div className='luxuryItem w-78 h-110 cursor-pointer overflow-hidden'>
+                            <div className='luxuryItem h-70 md:h-100 lg:w-78 lg:h-110 cursor-pointer overflow-hidden'>
                                 <img
                                     className='w-full h-full rounded-md'
                                     src="https://images.unsplash.com/photo-1553984658-d17e19aa281a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fHN1aXRzJTIwd29tZW58ZW58MHx8MHx8fDA%3D"
@@ -150,9 +129,9 @@ const Design = () => {
                         </div>
                     </div>
 
-                    <div className='flex justify-around items-center gap-10'>
+                    <div className='flex justify-center items-center gap-4 md:gap-5 lg:gap-10 p-4 lg:p-2'>
                         <div className='overflow-hidden rounded-md'>
-                            <div className='luxuryItem md:w-97 md:h-130 cursor-pointer'>
+                            <div className='luxuryItem md:h-100 lg:w-97 lg:h-130 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-md object-cover object-center'
                                     src="https://images.unsplash.com/photo-1621335829175-95f437384d7c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1lbiUyMHN1aXRzfGVufDB8fDB8fHww"
@@ -160,7 +139,7 @@ const Design = () => {
                             </div>
                         </div>
                         <div className='overflow-hidden rounded-md'>
-                            <div className='luxuryItem w-60 h-90 cursor-pointer'>
+                            <div className='luxuryItem md:h-70 lg:w-60 lg:h-90 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-md object-cover object-center'
                                     src="https://images.unsplash.com/photo-1593030103066-0093718efeb9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWVuJTIwc3VpdHN8ZW58MHx8MHx8fDA%3D"
@@ -168,7 +147,7 @@ const Design = () => {
                             </div>
                         </div>
                         <div className='overflow-hidden rounded-md'>
-                            <div className='luxuryItem w-80 h-110 cursor-pointer overflow-hidden'>
+                            <div className='luxuryItem md:h-90 lg:w-80 lg:h-110 cursor-pointer overflow-hidden'>
                                 <img
                                     className='w-full h-full rounded-md'
                                     src="https://images.unsplash.com/photo-1619533394727-57d522857f89?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWVuJTIwc3VpdHN8ZW58MHx8MHx8fDA%3D"
@@ -179,14 +158,14 @@ const Design = () => {
                 </div>
 
                 <div className="text-center mt-10 sliderTitle">
-                    <p className="mt-1 text-5xl text-gray-900 mb-10">
+                    <p className="mt-1 text-5xl text-gray-900 md:mb-10">
                         Top Designs
                     </p>
                 </div>
                 <div className='luxurySection flex flex-col gap-10 mb-10'>
-                    <div className='flex justify-center items-center gap-10'>
+                    <div className='flex justify-center items-center gap-2 md:gap-4 lg:gap-10 p-4 md:p-5 lg:p-5'>
                         <div className='overflow-hidden rounded-sm'>
-                            <div className='luxuryItem w-97 h-143 cursor-pointer'>
+                            <div className='luxuryItem md:h-130 lg:w-97 lg:h-143 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-sm object-cover object-center'
                                     src="https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -194,7 +173,7 @@ const Design = () => {
                             </div>
                         </div>
                         <div className='overflow-hidden rounded-sm'>
-                            <div className='luxuryItem w-80 h-110 cursor-pointer overflow-hidden'>
+                            <div className='luxuryItem md:h-80 lg:w-80 lg:h-110 cursor-pointer overflow-hidden'>
                                 <img
                                     className='w-full h-full rounded-sm'
                                     src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
@@ -202,7 +181,7 @@ const Design = () => {
                             </div>
                         </div>
                         <div className='overflow-hidden rounded-sm'>
-                            <div className='luxuryItem w-95 h-130 cursor-pointer'>
+                            <div className='luxuryItem md:h-100 lg:w-95 lg:h-130 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-sm object-cover object-center'
                                     src="https://images.unsplash.com/photo-1550639525-c97d455acf70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZHJlc3N8ZW58MHx8MHx8fDA%3D"
@@ -212,7 +191,7 @@ const Design = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-col md:flex-row items-center justify-center gap-0 md:gap-30 mt-50 md:mt-20'>
+                <div className='flex flex-col lg:flex-row items-center justify-center gap-0 md:gap-5 lg:gap-10 mt-60 md:mt-50 lg:mt-5'>
                     <div className='tradition text-5xl md:text-7xl mt-[-10rem] mb-2 md:mb-0'>
                         <p>Tranditional Wear</p>
                     </div>
