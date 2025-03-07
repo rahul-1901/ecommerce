@@ -58,6 +58,9 @@ const Navbar = () => {
           <Link to="/allTrend" className='routeMain'>
             Collection
           </Link>
+          <Link to="/luxury" className='routeMain'>
+            Luxury
+          </Link>
           <Link to="/about" className='routeMain'>
             About
           </Link>
@@ -102,6 +105,10 @@ const Navbar = () => {
               <div className='w-54 h-[1px] bg-black'></div>
               <Link to="/watches" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
                 Accessories
+              </Link>
+              <div className='w-54 h-[1px] bg-black'></div>
+              <Link to="/luxury" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
+                Luxury
               </Link>
               <div className='w-54 h-[1px] bg-black'></div>
               <Link to="/about" className="flex text-3xl linkComponent" onClick={() => { setIsOpen(false) }}>
