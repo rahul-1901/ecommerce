@@ -57,7 +57,7 @@ const About = () => {
                                     <div className='spanLine ml-2'></div>
                                 </div>
                                 <p className="text-lg text-gray-600 leading-relaxed animateAppear">
-                                    PreMart was born out of a passion for innovation and a desire to revolutionize the way people shop online.
+                                    <span className='font-semibold'>URBAN LUXE</span> was born out of a passion for innovation and a desire to revolutionize the way people shop online.
                                     Our journey began with a simple idea: to provide a platform where customers can easily discover, explore,
                                     and purchase a wide range of products from the comfort of their homes.
                                 </p>

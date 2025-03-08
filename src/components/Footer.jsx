@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import "./Navbar.css";
 import {Link} from "react-router-dom";
+import urbanFooter from "../assets/urbanFooter.png";
 
 const Footer = () => {
     return (
@@ -23,7 +24,7 @@ const Footer = () => {
                 <div className="container mx-auto px-4 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div className='lg:ml-10'>
-                            <h4 className="text-xl font-bold text-white mb-4">PreMart</h4>
+                            <img src={urbanFooter} className='ml-[-5px] h-12 w-43'/>
                             <p className="mb-4 text-sm leading-relaxed">
                                 Your premier destination for quality products at competitive prices.
                                 We're committed to providing an exceptional shopping experience.
@@ -35,10 +36,10 @@ const Footer = () => {
                                 <a href="#" className="hover:text-blue-400 transition-colors">
                                     <Twitter size={20} />
                                 </a>
-                                <a href="#" className="hover:text-blue-400 transition-colors">
+                                <a href="https://www.instagram.com/rahulyadav_1916/?__pwa=1" target="_blank" className="hover:text-blue-400 transition-colors">
                                     <Instagram size={20} />
                                 </a>
-                                <a href="#" className="hover:text-blue-400 transition-colors">
+                                <a href="https://www.youtube.com/@Itsme23jjkk" target='_blank' className="hover:text-blue-400 transition-colors">
                                     <Youtube size={20} />
                                 </a>
                             </div>
@@ -78,7 +79,7 @@ const Footer = () => {
                     <div className="container mx-auto px-4 py-6">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                             <p className="text-sm">
-                                © 2024 PreMart. All rights reserved.
+                                © 2024 <span className='font-semibold'>URBAN LUXE</span>. All rights reserved.
                             </p>
                             <div className="flex gap-6 text-sm">
                                 <a className="hover:text-white transition-colors cursor-pointer">Privacy Policy</a>

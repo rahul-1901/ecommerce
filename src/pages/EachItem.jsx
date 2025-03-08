@@ -46,11 +46,11 @@ const EachItem = () => {
                 // return toast.error(response.message);
                 throw new Error(response.message);
             } else {
-                toast.success(response.message, { autoClose: 1000 })
+                toast.success(response.message, { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } })
                 console.log(response.purchasedClothes)
             }
         } catch (error) {
-            toast.error(error.message, { autoClose: 1000 });
+            toast.error(error.message, { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } });
         }
     }
 

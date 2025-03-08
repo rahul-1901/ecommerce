@@ -45,8 +45,8 @@ const Home = () => {
                 <div>
                     <div className='startPart flex md:bg-[69%_25%] bg-center mt-[70px] h-[100vh]'>
                         <div className='attention text-white z-200 flex flex-col items-center md:mt-10'>
-                            <h1 className='md:text-5xl text-4xl'>Summer Collection</h1>
-                            <p className='md:text-2xl text-xl'>Discover the latest trends</p>
+                            <h1 className='md:text-5xl text-4xl text-gray-100'>Summer Collection</h1>
+                            <p className='md:text-2xl text-xl text-gray-100'>Discover the latest trends</p>
                             <motion.button
                                 onClick={() => {
                                     setIsShaking(true);
@@ -58,7 +58,7 @@ const Home = () => {
                                 }}
                                 animate={isShaking ? { x: [-5, 5, -5, 5, 0] } : {}}
                                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                                className='mt-3 cursor-pointer'
+                                className='mt-3 cursor-pointer rounded-sm'
                             >
                                 Shop Now
                             </motion.button>
@@ -189,10 +189,10 @@ const Home = () => {
                                         <Star key={i} className="w-4 md:w-5 h-4 md:h-5 fill-current text-yellow-400" />
                                     ))}
                                 </div>
-                                <p className='text-gray-500'>"Exceptional quality and style.
-                                    The attention to detail and customer service is outstanding.
-                                    Will definitely shop here again!"</p>
-                                <p className='mt-2 ml-1'>-Rahul Yadav</p>
+                                <p className='text-gray-500'>"Absolutely love the quality and craftsmanship! 
+                                    Every piece feels premium, and the customer service was beyond helpful. 
+                                    Will be a returning customer!"</p>
+                                <p className='mt-2 ml-1'>-Dakshita Sharma</p>
                             </div>
                             <div className='firstReview flex flex-col md:h-[190px] p-2 rounded-[10px] bg-white animateAppear'>
                                 <div className="flex mt-2 mb-1">
@@ -200,10 +200,11 @@ const Home = () => {
                                         <Star key={i} className="w-4 md:w-5 h-4 md:h-5 fill-current text-yellow-400" />
                                     ))}
                                 </div>
-                                <p className='text-gray-500'>"Exceptional quality and style.
-                                    The attention to detail and customer service is outstanding.
-                                    Will definitely shop here again!"</p>
-                                <p className='mt-2 ml-1'>-Rahul Yadav</p>
+                                <p className='text-gray-500'>"Exceeded my expectations! 
+                                    The material feels luxurious, and the design is flawless. 
+                                    Plus, the team was super responsive. 
+                                    Definitely a five-star experience!"</p>
+                                <p className='mt-2 ml-1'>-Disha</p>
                             </div>
                         </div>
                     </div>

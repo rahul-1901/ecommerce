@@ -26,13 +26,13 @@ const SignUp = () => {
         e.preventDefault();
         try {
             const response = await axios.post(`${API_BASE_URL}/api/user/signUp`, userData);
-            toast.success(response.data.message, {autoClose: 1000})
+            toast.success(response.data.message, {autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" }})
             setTimeout(() => {
                 navigate("/login")
             }, 2000)
         } catch (error) {
             const response1 = error;
-            toast.error(response1.response.data.message)
+            toast.error(response1.response.data.message, {style: { backgroundColor: "#f3f4f6", color: "#000000" }})
             // console.log(error)
         }
     }

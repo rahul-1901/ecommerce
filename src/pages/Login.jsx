@@ -20,10 +20,10 @@ const Login = () => {
         e.preventDefault();
         try {
             if (localStorage.getItem("userToken")) {
-                toast.warn("LogOut First", { autoClose: 1000 });
+                toast.warn("LogOut First", { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } });
             } else {
                 const response = await axios.post(`${API_BASE_URL}/api/user/login`, userData);
-                toast.success(response.data.message, { autoClose: 1000 });
+                toast.success(response.data.message, { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } });
                 setTimeout(() => {
                     navigate("/dashBoard");
                 }, 2000)
@@ -36,7 +36,7 @@ const Login = () => {
         } catch (error) {
             // console.log(error)
             const response1 = error
-            toast.error(response1.response.data.message, { autoClose: 1000 })
+            toast.error(response1.response.data.message, { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } })
         }
     }
 

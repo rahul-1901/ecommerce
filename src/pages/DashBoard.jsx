@@ -43,7 +43,7 @@ const DashBoard = () => {
     const handleLogout = () => {
         localStorage.removeItem("userToken");
         localStorage.removeItem("userEmail");
-        toast.success("Logout successfull...", {autoClose: 1000})
+        toast.success("Logout successfull...", {autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" }})
         setTimeout(() => {
             navigate('/login');
         }, 2000)

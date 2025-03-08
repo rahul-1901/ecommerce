@@ -234,7 +234,7 @@ const Watches = () => {
     const [showWatches, setShowWatches] = useState(false);
 
     const handlePurchase = () => {
-        toast.warn("Comming Soon...", { autoClose: 1000, position: "top-center" })
+        toast.warn("Comming Soon...", { autoClose: 1000, position: "top-center", style: { backgroundColor: "#f3f4f6", color: "#000000" } })
     }
 
     useEffect(() => {
@@ -261,10 +261,10 @@ const Watches = () => {
                         </div>
                         <div className="relative flex justify-center items-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="textClass flex flex-col text-center mt-0 md:mt-10">
-                                <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                                <h1 className="text-2xl md:text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-gray-300">
                                     Our Watch Collection
                                 </h1>
-                                <p className="mt-6 text-sm md:text-xl text-white max-w-3xl mx-auto">
+                                <p className="mt-6 text-sm md:text-xl text-gray-300 max-w-3xl mx-auto">
                                     Discover timepieces for every style, occasion, and budget.
                                 </p>
                             </div>

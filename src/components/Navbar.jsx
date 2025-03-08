@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { ShoppingCart, Search, User, X, Menu, LogOut } from 'lucide-react';
 import { AnimatePresence, motion } from "framer-motion";
 import "./Navbar.css";
+import urban from "../assets/urbanSec.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -11,7 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const handleExcess = () => {
     if (!localStorage.getItem("userToken")) {
-      toast.error("Login first...", { autoClose: 1000 })
+      toast.error("Login first...", { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" }})
     } else {
       navigate('/cart');
     }
@@ -26,12 +27,16 @@ const Navbar = () => {
   }
 
   const handleLogout = () => {
-    localStorage.removeItem("userToken");
-    localStorage.removeItem("userEmail");
-    toast.success("Logout successfull...", { autoClose: 1000 })
-    setTimeout(() => {
-      navigate('/login');
-    }, 2000)
+    if (localStorage.getItem("userToken")) {
+      localStorage.removeItem("userToken");
+      localStorage.removeItem("userEmail");
+      toast.success("Logout successfull...", { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } })
+      setTimeout(() => {
+        navigate('/login');
+      }, 2000)
+    } else {
+      toast.warn("User not Logined...", {autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" }});
+    }
     // if(localStorage.getItem("userToken")) {
     //     console.log(localStorage.getItem("userToken"));
     // }
@@ -40,11 +45,11 @@ const Navbar = () => {
 
   return (
     <div className='navbarBody w-full top-0 left-0 fixed z-9999'>
-      <div className='navbarContent mx-auto shadow-md p-5 bg-white'>
+      <div className='navbarContent mx-auto shadow-md p-5 bg-gray-100'>
 
-        <div className='navbarLogo flex items-center md:px-10'>
+        <div className='navbarLogo flex items-center md:px-1'>
           <Link to="/" className='logoName md:text-2xl text-3xl font-bold'>
-            <span>PreMart</span>
+            <img src={urban} className='ml-[-14px] md:ml-[0px] w-45 h-12  md:h-11 md:w-42'></img>
           </Link>
         </div>
 

@@ -16,15 +16,15 @@ const Payment = () => {
         try {
             const response = await deliveryWork(deliveryData);
             if (response.message === 'Info already there...') {
-                toast.warn(response.message, { autoClose: 1000 })
+                toast.warn(response.message, { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } })
             } else {
-                toast.success(response.message, { autoClose: 1000 })
+                toast.success(response.message, { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } })
             }
             setTimeout(() => {
                 navigate('/finalPayment');
             }, 2000)
         } catch (error) {
-            toast.error("Error submitting delivery details.");
+            toast.error("Error submitting delivery details.", {autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" }});
         }
     }
 

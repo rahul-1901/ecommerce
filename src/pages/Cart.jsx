@@ -42,17 +42,17 @@ const Cart = () => {
             if (response.success === false) {
                 throw new Error(response.message)
             } else {
-                toast.success("Item purchased", { autoClose: 1000 })
+                toast.success("Item purchased", { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } })
             }
         } catch (error) {
-            toast.error(error.message, { autoClose: 1000 })
+            toast.error(error.message, { autoClose: 1000, style: { backgroundColor: "#f3f4f6", color: "#000000" } })
         }
     }
 
     const handleDelete = async (id) => {
         try {
             const response = await deleteUserClothes(id);
-            toast.success(response, { autoClose: 500 });
+            toast.success(response, { autoClose: 500, style: { backgroundColor: "#f3f4f6", color: "#000000" } });
             const updatedUserClothes = await purchasedItems();
             setTimeout(() => {
                 setPurchased(updatedUserClothes);

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import videoFashion from "../assets/clothesPage.mp4";
-import "./Design.css"
+import "./Design.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Design = () => {
     const [showLuxury, setShowLuxury] = useState(false);
@@ -10,6 +12,10 @@ const Design = () => {
             setShowLuxury(true);
         }, 1000)
     }, [])
+
+    const handleOnClick = () => {
+        toast.warn("Comming Soon...", {autoClose: 1000, position: "top-center", style: { backgroundColor: "#f3f4f6", color: "#000000" }})
+    }
 
     return (
         <>
@@ -111,7 +117,7 @@ const Design = () => {
                 </div>
                 <div className='luxurySection flex flex-col gap-1 md:gap-10 mb-20 md:mb-10'>
                     <div className='flex justify-center items-center gap-4 md:gap-10 p-4 lg:p-0'>
-                        <div className='overflow-hidden rounded-md'>
+                        <div className='overflow-hidden rounded-md' onClick={handleOnClick}>
                             <div className='luxuryItem h-80 md:h-120 lg:w-89 lg:h-130 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-md object-cover object-center'
@@ -119,7 +125,7 @@ const Design = () => {
                                 />
                             </div>
                         </div>
-                        <div className='overflow-hidden rounded-md'>
+                        <div className='overflow-hidden rounded-md' onClick={handleOnClick}>
                             <div className='luxuryItem h-70 md:h-100 lg:w-78 lg:h-110 cursor-pointer overflow-hidden'>
                                 <img
                                     className='w-full h-full rounded-md'
@@ -130,7 +136,7 @@ const Design = () => {
                     </div>
 
                     <div className='flex justify-center items-center gap-4 md:gap-5 lg:gap-10 p-4 lg:p-2'>
-                        <div className='overflow-hidden rounded-md'>
+                        <div className='overflow-hidden rounded-md' onClick={handleOnClick}>
                             <div className='luxuryItem md:h-100 lg:w-97 lg:h-130 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-md object-cover object-center'
@@ -138,7 +144,7 @@ const Design = () => {
                                 />
                             </div>
                         </div>
-                        <div className='overflow-hidden rounded-md'>
+                        <div className='overflow-hidden rounded-md' onClick={handleOnClick}>
                             <div className='luxuryItem md:h-70 lg:w-60 lg:h-90 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-md object-cover object-center'
@@ -146,7 +152,7 @@ const Design = () => {
                                 />
                             </div>
                         </div>
-                        <div className='overflow-hidden rounded-md'>
+                        <div className='overflow-hidden rounded-md' onClick={handleOnClick}>
                             <div className='luxuryItem md:h-90 lg:w-80 lg:h-110 cursor-pointer overflow-hidden'>
                                 <img
                                     className='w-full h-full rounded-md'
@@ -164,7 +170,7 @@ const Design = () => {
                 </div>
                 <div className='luxurySection flex flex-col gap-10 mb-10'>
                     <div className='flex justify-center items-center gap-2 md:gap-4 lg:gap-10 p-4 md:p-5 lg:p-5'>
-                        <div className='overflow-hidden rounded-sm'>
+                        <div className='overflow-hidden rounded-sm' onClick={handleOnClick}>
                             <div className='luxuryItem md:h-130 lg:w-97 lg:h-143 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-sm object-cover object-center'
@@ -172,7 +178,7 @@ const Design = () => {
                                 />
                             </div>
                         </div>
-                        <div className='overflow-hidden rounded-sm'>
+                        <div className='overflow-hidden rounded-sm' onClick={handleOnClick}>
                             <div className='luxuryItem md:h-80 lg:w-80 lg:h-110 cursor-pointer overflow-hidden'>
                                 <img
                                     className='w-full h-full rounded-sm'
@@ -180,7 +186,7 @@ const Design = () => {
                                 />
                             </div>
                         </div>
-                        <div className='overflow-hidden rounded-sm'>
+                        <div className='overflow-hidden rounded-sm' onClick={handleOnClick}>
                             <div className='luxuryItem md:h-100 lg:w-95 lg:h-130 cursor-pointer'>
                                 <img
                                     className='w-full h-full rounded-sm object-cover object-center'
@@ -196,13 +202,14 @@ const Design = () => {
                         <p>Tranditional Wear</p>
                     </div>
                     <div className='flex imageFlex justify-center items-center gap-4 mb-20'>
-                        <img className='expanded w-[50px] hover:w-[280px] md:w-[80px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/ec/be/19/ecbe1981d674987652b20dbc1bb90f19.jpg" />
-                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/ce/8c/ca/ce8cca13b86452128d15f0ecc840489d.jpg" />
-                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/5f/f0/9f/5ff09f3dd039041466be765c8ea06f25.jpg" />
-                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/d5/e4/b7/d5e4b7c06a92900029bdc810c20736be.jpg" />
-                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/36/33/0e/36330e82189c3aed40b1d7552ce991a0.jpg" />
+                        <img className='expanded w-[50px] hover:w-[280px] md:w-[80px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/ec/be/19/ecbe1981d674987652b20dbc1bb90f19.jpg" onClick={handleOnClick}/>
+                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/ce/8c/ca/ce8cca13b86452128d15f0ecc840489d.jpg" onClick={handleOnClick}/>
+                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/5f/f0/9f/5ff09f3dd039041466be765c8ea06f25.jpg" onClick={handleOnClick}/>
+                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/d5/e4/b7/d5e4b7c06a92900029bdc810c20736be.jpg" onClick={handleOnClick}/>
+                        <img className='expanded w-[50px] md:w-[80px] hover:w-[280px] object-cover object-center cursor-pointer' src="https://i.pinimg.com/474x/36/33/0e/36330e82189c3aed40b1d7552ce991a0.jpg" onClick={handleOnClick}/>
                     </div>
                 </div>
+                <ToastContainer/>
             </div>
             ) : (
                 <div className="min-h-screen flex items-center justify-center mt-[70px]">
